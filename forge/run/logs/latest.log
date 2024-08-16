@@ -1,0 +1,1104 @@
+[16:53:03] [main/INFO] (Launcher) ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.20.1-5, --assetsDir, /home/down/.gradle/caches/fabric-loom/assets, --gameDir, ., --fml.forgeVersion, 47.3.3, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, -mixin.config, itemplacer.mixins.json, --mixin.config, itemplacer.mixins.json]
+[16:53:03] [main/INFO] (Launcher) ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 21.0.4 by Amazon.com Inc.; OS Linux arch amd64 version 6.10.4-zen2-1-zen
+[16:53:03] [main/INFO] (ImmediateWindowHandler) Loading ImmediateWindowProvider fmlearlywindow
+[16:53:03] [main/INFO] (EARLYDISPLAY) Trying GL version 4.6
+[16:53:03] [main/INFO] (EARLYDISPLAY) Requested GL version 4.6 got version 4.6
+[16:53:03] [main/INFO] (mixin) SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/home/down/.gradle/caches/modules-2/files-2.1/dev.architectury/mixin-patched/0.8.5.11/dd886ad7af30604cbd9aa0f1eb9fb95b079013ca/mixin-patched-0.8.5.11.jar%23115!/ Service=ModLauncher Env=CLIENT
+[16:53:03] [main/WARN] (ModFileParser) Mod file /home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.20.1-47.3.3/610ba8d1592416039cb07430af193c49267c524e/javafmllanguage-1.20.1-47.3.3.jar is missing mods.toml file
+[16:53:03] [main/WARN] (ModFileParser) Mod file /home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/lowcodelanguage/1.20.1-47.3.3/12de970e4bc1ff56a1c64ecd1c2d942413a50556/lowcodelanguage-1.20.1-47.3.3.jar is missing mods.toml file
+[16:53:03] [main/WARN] (ModFileParser) Mod file /home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/mclanguage/1.20.1-47.3.3/95059649e9606aac5fd660447993476841990a4c/mclanguage-1.20.1-47.3.3.jar is missing mods.toml file
+[16:53:03] [main/WARN] (ModFileParser) Mod file /home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlcore/1.20.1-47.3.3/9844c9b5b187fe9089f9ea36ad414fe8d3ca13fe/fmlcore-1.20.1-47.3.3.jar is missing mods.toml file
+[16:53:03] [main/INFO] (ModDiscoverer) Found mod file javafmllanguage-1.20.1-47.3.3.jar of type LANGPROVIDER with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@3c3a8246
+[16:53:03] [main/INFO] (ModDiscoverer) Found mod file lowcodelanguage-1.20.1-47.3.3.jar of type LANGPROVIDER with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@3c3a8246
+[16:53:03] [main/INFO] (ModDiscoverer) Found mod file mclanguage-1.20.1-47.3.3.jar of type LANGPROVIDER with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@3c3a8246
+[16:53:03] [main/INFO] (ModDiscoverer) Found mod file fmlcore-1.20.1-47.3.3.jar of type LIBRARY with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@3c3a8246
+[16:53:03] [main/INFO] (ModDiscoverer) Found mod file forge-1.20.1-47.3.3-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.1-v2-forge-1.20.1-47.3.3.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@3c3a8246
+[16:53:03] [main/INFO] (ModDiscoverer) Found mod file main of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@3c3a8246
+[16:53:03] [main/INFO] (ModDiscoverer) Found mod file  of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.MinecraftLocator@3c3a8246
+[16:53:03] [pool-5-thread-1/INFO] (EARLYDISPLAY) GL info: NVIDIA GeForce RTX 3070/PCIe/SSE2 GL version 4.6.0 NVIDIA 555.58.02, NVIDIA Corporation
+[16:53:03] [main/INFO] (ModDiscoverer) Found mod file architectury-forge-9.2.14.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@43815bc
+[16:53:03] [main/INFO] (ModDiscoverer) Found mod file cloth-config-forge-11.1.118.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@43815bc
+[16:53:03] [main/INFO] (ModDiscoverer) Found mod file 14157361720029599282.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@43815bc
+[16:53:03] [main/INFO] (ModDiscoverer) Found mod file architectury-forge-9.2.14.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@43815bc
+[16:53:03] [main/INFO] (ModDiscoverer) Found mod file cloth-config-forge-11.1.118.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@43815bc
+[16:53:03] [main/INFO] (ModDiscoverer) Found mod file 14157361720029599282.jar of type MOD with provider net.minecraftforge.fml.loading.moddiscovery.ClasspathLocator@43815bc
+[16:53:03] [main/INFO] (JarInJarDependencyLocator) No dependencies to load found. Skipping!
+[16:53:04] [main/INFO] (mixin) Compatibility level set to JAVA_17
+[16:53:04] [main/INFO] (LaunchServiceHandler) Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, /home/down/.gradle/caches/fabric-loom/assets, --assetIndex, 1.20.1-5]
+[16:53:04] [main/INFO] (unprotect) Found 7431 Minecraft classes
+[16:53:04] [main/INFO] (mixin) Remapping refMap architectury-forge-refmap.json using RemapperChain (Architectury Patched)
+[16:53:04] [main/INFO] (mixin) Remapping refMap architectury-common-refmap.json using RemapperChain (Architectury Patched)
+[16Aug2024 16:53:06.503] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 188 Datafixer optimizations took 47 milliseconds
+[16Aug2024 16:53:07.267] [Render thread/WARN] [net.minecraft.resource.DefaultResourcePackBuilder/]: Assets URL 'union:/home/down/.gradle/caches/fabric-loom/minecraftMaven/net/minecraft/forge-1.20.1-47.3.3-minecraft-merged/1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.1-v2-forge-1.20.1-47.3.3/forge-1.20.1-47.3.3-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.1-v2-forge-1.20.1-47.3.3.jar%23185!/assets/.mcassetsroot' uses unexpected schema
+[16Aug2024 16:53:07.267] [Render thread/WARN] [net.minecraft.resource.DefaultResourcePackBuilder/]: Assets URL 'union:/home/down/.gradle/caches/fabric-loom/minecraftMaven/net/minecraft/forge-1.20.1-47.3.3-minecraft-merged/1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.1-v2-forge-1.20.1-47.3.3/forge-1.20.1-47.3.3-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.1-v2-forge-1.20.1-47.3.3.jar%23185!/data/.mcassetsroot' uses unexpected schema
+[16Aug2024 16:53:07.275] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[16Aug2024 16:53:07.278] [Render thread/INFO] [net.minecraft.client.MinecraftClient/]: Setting user: Dev
+[16Aug2024 16:53:07.319] [Render thread/INFO] [net.minecraft.client.MinecraftClient/]: Backend library: LWJGL version 3.3.2+13
+[16Aug2024 16:53:07.428] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.3.3, for MC 1.20.1 with MCP 20230612.114412
+[16Aug2024 16:53:07.429] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.3.3 Initialized
+[16Aug2024 16:53:07.510] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering S2C receiver with id architectury:sync_ids
+[16Aug2024 16:53:07.511] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id architectury:sync_ids
+[16Aug2024 16:53:07.511] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id itemplacer:itemplace
+[16Aug2024 16:53:07.511] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id itemplacer:itemrotate
+[16Aug2024 16:53:07.530] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id itemplacer:itemplace
+[16Aug2024 16:53:07.530] [modloading-worker-0/INFO] [dev.architectury.networking.forge.NetworkManagerImpl/]: Registering C2S receiver with id itemplacer:itemrotate
+[16Aug2024 16:53:07.990] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: []
+[16Aug2024 16:53:08.056] [Render thread/ERROR] [com.mojang.text2speech.Narrator/]: Error while loading the narrator
+com.mojang.text2speech.Narrator$InitializeException: Failed to load library flite
+	at com.mojang.text2speech.NarratorLinux$FliteLibrary.loadNative(NarratorLinux.java:69) ~[text2speech-1.17.9.jar%23159!/:?]
+	at com.mojang.text2speech.NarratorLinux.<init>(NarratorLinux.java:18) ~[text2speech-1.17.9.jar%23159!/:?]
+	at com.mojang.text2speech.Narrator.getNarrator(Narrator.java:41) ~[text2speech-1.17.9.jar%23159!/:?]
+	at net.minecraft.client.util.NarratorManager.<init>(NarratorManager.java:19) ~[forge-1.20.1-47.3.3-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.1-v2-forge-1.20.1-47.3.3.jar%23185!/:?]
+	at net.minecraft.client.MinecraftClient.<init>(MinecraftClient.java:553) ~[forge-1.20.1-47.3.3-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.1-v2-forge-1.20.1-47.3.3.jar%23185!/:?]
+	at net.minecraft.client.main.Main.main(Main.java:182) ~[forge-1.20.1-47.3.3-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.1-v2-forge-1.20.1-47.3.3.jar%23185!/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:111) ~[fmlloader-1.20.1-47.3.3.jar%2393!/:?]
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:99) ~[fmlloader-1.20.1-47.3.3.jar%2393!/:?]
+	at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.devService(ForgeClientUserdevLaunchHandler.java:19) ~[fmlloader-1.20.1-47.3.3.jar%2393!/:?]
+	at net.minecraftforge.fml.loading.targets.CommonDevLaunchHandler.lambda$makeService$7(CommonDevLaunchHandler.java:135) ~[fmlloader-1.20.1-47.3.3.jar%2393!/:?]
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) ~[modlauncher-10.0.9.jar%2397!/:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) ~[modlauncher-10.0.9.jar%2397!/:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) ~[modlauncher-10.0.9.jar%2397!/:?]
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) ~[modlauncher-10.0.9.jar%2397!/:?]
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar%2397!/:?]
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar%2397!/:?]
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar%2397!/:?]
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[?:?]
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) ~[dev-launch-injector-0.2.1+build.8.jar%23183!/:?]
+	at dev.architectury.transformer.TransformerRuntime.main(TransformerRuntime.java:220) ~[?:?]
+Caused by: java.lang.UnsatisfiedLinkError: Unable to load library 'flite':
+libflite.so: cannot open shared object file: No such file or directory
+libflite.so: cannot open shared object file: No such file or directory
+Native library (linux-x86-64/libflite.so) not found in resource path (/home/down/Desktop/itemplacer/1.20.1/forge/build/classes/java/main:/home/down/Desktop/itemplacer/1.20.1/forge/build/resources/main:/home/down/.gradle/caches/fabric-loom/1.20.1/forge/1.20.1-47.3.3/client-extra.jar:/home/down/.gradle/caches/fabric-loom/1.20.1/net.fabricmc.yarn.1_20_1.1.20.1+build.1-v2-forge-1.20.1-47.3.3/mappings.jar:/home/down/.gradle/caches/modules-2/files-2.1/dev.architectury/architectury-transformer/5.2.87/c81d58e13fbd902ba5d909126733b9e3771c4395/architectury-transformer-5.2.87-agent.jar:/home/down/.gradle/caches/modules-2/files-2.1/dev.architectury/architectury-transformer/5.2.87/980814ce433a3396de4495194f027dfecc94bb3a/architectury-transformer-5.2.87-runtime.jar:/home/down/Desktop/itemplacer/1.20.1/common/build/devlibs/itemplacer-common-1.9-dev.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlearlydisplay/1.20.1-47.3.3/15fb636ae8d7f28541873205683c9dd1d32c1f27/fmlearlydisplay-1.20.1-47.3.3.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.20.1-47.3.3/610ba8d1592416039cb07430af193c49267c524e/javafmllanguage-1.20.1-47.3.3.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/lowcodelanguage/1.20.1-47.3.3/12de970e4bc1ff56a1c64ecd1c2d942413a50556/lowcodelanguage-1.20.1-47.3.3.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/mclanguage/1.20.1-47.3.3/95059649e9606aac5fd660447993476841990a4c/mclanguage-1.20.1-47.3.3.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlcore/1.20.1-47.3.3/9844c9b5b187fe9089f9ea36ad414fe8d3ca13fe/fmlcore-1.20.1-47.3.3.jar:/home/down/.gradle/caches/fabric-loom/forge/transformed-dependencies-v1/net/minecraftforge/69d22e3ac976199c9cfd3709f2fbfa4640f092e164183b78c974ea894bce4e3b/fmlloader/1.20.1-47.3.3/fmlloader-1.20.1-47.3.3.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/forgespi/7.0.1/3b4972a0cdb135853dba219be61a79b22cff1309/forgespi-7.0.1.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/accesstransformers/8.0.4/272d240aa73f42195b2a68e2ebd8b701ecf41f63/accesstransformers-8.0.4.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/eventbus/6.0.5/699143dd438431d06b57416944f7cedbe52e1475/eventbus-6.0.5.jar:/home/down/.gradle/caches/modules-2/files-2.1/cpw.mods/modlauncher/10.0.9/6d9443f56f50bb85cea383686ff9c867391458b/modlauncher-10.0.9.jar:/home/down/.gradle/caches/modules-2/files-2.1/cpw.mods/bootstraplauncher/1.1.2/c546e00443d8432cda6baa1c860346980742628/bootstraplauncher-1.1.2.jar:/home/down/.gradle/caches/modules-2/files-2.1/cpw.mods/securejarhandler/2.1.10/51e6a22c6c716beb11e244bf5b8be480f51dd6b5/securejarhandler-2.1.10.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/coremods/5.1.6/62fab3c3d59d37f8e15af311cb638c6f6123423/coremods-5.1.6.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.openjdk.nashorn/nashorn-core/15.3/43977e804697048fc8d81d333a36c17d07a5b3dd/nashorn-core-15.3.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-commons/9.7/e86dda4696d3c185fcc95d8d311904e7ce38a53f/asm-commons-9.7.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/mergetool/1.1.5/f3da18e12c696d35a47c82cbb2cc8b5aa15e1154/mergetool-1.1.5-api.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-util/9.7/c0655519f24d92af2202cb681cd7c1569df6ead6/asm-util-9.7.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-analysis/9.7/e4a258b7eb96107106c0599f0061cfc1832fe07a/asm-analysis-9.7.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-tree/9.7/e446a17b175bfb733b87c5c2560ccb4e57d69f1a/asm-tree-9.7.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/9.7/73d7b3086e14beb604ced229c302feff6449723/asm-9.7.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.antlr/antlr4/4.9.1/e92af8ab33e428461927b484e90bb155a4f3a052/antlr4-4.9.1.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.antlr/antlr4-runtime/4.9.1/428664f05d2b7f7b7610204b5aa7c1763f62011a/antlr4-runtime-4.9.1.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/unsafe/0.2.0/54d7a0a5e8fdb71b973025caa46f341ae5904f39/unsafe-0.2.0.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.electronwill.night-config/toml/3.6.4/51d6cefb2b55ee55ee26b16391212fb2c7dfb4f4/toml-3.6.4.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.electronwill.night-config/core/3.6.4/510f174abbf1c947494db50ef2445683bd52c230/core-3.6.4.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/JarJarSelector/0.3.19/376cc9c8ea60720cf027c01fc033de915699801c/JarJarSelector-0.3.19.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/JarJarMetadata/0.3.19/83feaa9b770e6ac0e96ee4fc23fa89325c5fe2/JarJarMetadata-0.3.19.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.8.5/4433f50c07debefaed0553bd0068f4f48d449313/maven-artifact-3.8.5.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.jodah/typetools/0.6.3/a01aaa6ddaea9ec07ec4f209487b7a46a526283a/typetools-0.6.3.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecrell/terminalconsoleappender/1.3.0/b562e9bb61235c9520e26282cdee71f8f802d1fc/terminalconsoleappender-1.3.0.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.jline/jline-reader/3.20.0/8f15415b022a25b473e8e16c28ae913186ffb9c4/jline-reader-3.20.0.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.jline/jline-terminal/3.20.0/d0ddcc708ddf527a3454c941b7b9225cc83a15ff/jline-terminal-3.20.0.jar:/home/down/.gradle/caches/modules-2/files-2.1/dev.architectury/mixin-patched/0.8.5.11/dd886ad7af30604cbd9aa0f1eb9fb95b079013ca/mixin-patched-0.8.5.11.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/JarJarFileSystems/0.3.19/2464eb7d6b9ddb9db36a82cf8a95193e5c6fe020/JarJarFileSystems-0.3.19.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.sf.jopt-simple/jopt-simple/5.0.4/4fdac2fbe92dfad86aa6e9301736f6b4342a3f5c/jopt-simple-5.0.4.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.mojang/logging/1.1.1/832b8e6674a9b325a5175a3a6267dfaf34c85139/logging-1.1.1.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.19.0/3b6eeb4de4c49c0fe38a4ee27188ff5fee44d0bb/log4j-core-2.19.0.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-slf4j2-impl/2.19.0/5c04bfdd63ce9dceb2e284b81e96b6a70010ee10/log4j-slf4j2-impl-2.19.0.jar:/home/down/.gradle/caches/modules-2/files-2.1/io.github.juuxel/unprotect/1.2.0/49cc229a0469f28fae41593a9537743ac6a951dc/unprotect-1.2.0.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.19.0/ea1b37f38c327596b216542bc636cfdc0b8036fa/log4j-api-2.19.0.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/srgutils/0.4.11/fbad1341ffdb47d276bbdc40ecb06da49e053e74/srgutils-0.4.11.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.codehaus.plexus/plexus-utils/3.3.0/cf43b5391de623b36fe066a21127baef82c64022/plexus-utils-3.3.0.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.12.0/c6842c86792ff03b9f1d1fe2aab8dc23aa6c6f0e/commons-lang3-3.12.0.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.10/dd9b193aef96e973d5a11ab13cd17430c2e4306b/gson-2.10.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/31.1-jre/60458f877d055d0c9114d9e1a2efb737b4bc282c/guava-31.1-jre.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.machinezoo.noexception/noexception/1.7.1/b65330c98e38a1f915fa54a6e5eca496505e3f0a/noexception-1.7.1.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-simple/1.7.30/e606eac955f55ecf1d8edcccba04eb8ac98088dd/slf4j-simple-1.7.30.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/2.0.1/f48d81adce2abf5ad3cfe463df517952749e03bc/slf4j-api-2.0.1.jar:/home/down/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.11.0/a2503f302b11ebde7ebc3df41daebe0e4eea3689/commons-io-2.11.0.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-glfw/3.3.2/757920418805fb90bfebb3d46b1d9e7669fca2eb/lwjgl-glfw-3.3.2.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-glfw/3.3.2/766bb0e8e829598b1c8052fd8173c62af741c52/lwjgl-glfw-3.3.2-natives-linux.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-opengl/3.3.2/ee8e95be0b438602038bc1f02dc5e3d011b1b216/lwjgl-opengl-3.3.2.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-opengl/3.3.2/b8368430ef0d91a5acbc6fbfa47b20c3ec083aec/lwjgl-opengl-3.3.2-natives-linux.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-stb/3.3.2/a2550795014d622b686e9caac50b14baa87d2c70/lwjgl-stb-3.3.2.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-stb/3.3.2/5c987f43b342d722b54970159040af76f1c87403/lwjgl-stb-3.3.2-natives-linux.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-tinyfd/3.3.2/9f65c248dd77934105274fcf8351abb75b34327c/lwjgl-tinyfd-3.3.2.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-tinyfd/3.3.2/5d27fc67172b3fcd8400d61a7cfb75da881f609/lwjgl-tinyfd-3.3.2-natives-linux.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.3.2/4421d94af68e35dcaa31737a6fc59136a1e61b94/lwjgl-3.3.2.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.3.2/767684973f259d97e7dc66a125eb153986f177e7/lwjgl-3.3.2-natives-linux.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.antlr/ST4/4.3/92f2c1ad8d84abcbeead6cf7f2c53a04166293c2/ST4-4.3.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.antlr/antlr-runtime/3.5.2/cd9cd41361c155f3af0f653009dcecb08d8b4afd/antlr-runtime-3.5.2.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.abego.treelayout/org.abego.treelayout.core/1.0.3/457216e8e6578099ae63667bb1e4439235892028/org.abego.treelayout.core-1.0.3.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.glassfish/javax.json/1.0.4/3178f73569fd7a1e5ffc464e680f7a8cc784b85a/javax.json-1.0.4.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.ibm.icu/icu4j/71.1/9e7d3304c23f9ba5cb71915f7cce23231a57a445/icu4j-71.1.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.google.guava/failureaccess/1.0.1/1dcf1de382a0bf95a3d8b0849546c88bac1292c9/failureaccess-1.0.1.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.google.guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/b421526c5f297295adef1c886e5246c39d4ac629/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/3.12.0/d5692f0526415fcc6de94bb5bfbd3afd9dd3b3e5/checker-qual-3.12.0.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.11.0/c5a0ace696d3f8b1c1d8cc036d8c03cc0cbe6b69/error_prone_annotations-2.11.0.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.3/ba035118bc8bac37d7eff77700720999acd9986d/j2objc-annotations-1.3.jar:/home/down/.gradle/caches/modules-2/files-2.1/dev.architectury/architectury-naming-service/2.0.9/c4c4732b3a00b67523c3028b49af402402be7883/architectury-naming-service-2.0.9.jar:/home/down/.gradle/caches/modules-2/files-2.1/dev.architectury/architectury-mixin-remapper-service/2.0.9/eede5ef35349f2b295fe1f3e7579382d26784b24/architectury-mixin-remapper-service-2.0.9.jar:/home/down/.gradle/caches/modules-2/files-2.1/dev.architectury/mcp-annotations/2.0.9/84f3d1e27805912592af0289d6fce0be53ee689a/mcp-annotations-2.0.9.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.fabricmc/dev-launch-injector/0.2.1+build.8/da8bef7e6e2f952da707f282bdb46882a0fce5e3/dev-launch-injector-0.2.1+build.8.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.2.2/54f5efc19bca95d709d9a37d19ffcbba3d21c1a6/oshi-core-6.2.2.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.mojang/authlib/4.0.43/2ff9d747a77570a07a60d32ac77eb6162ad2a2d9/authlib-4.0.43.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.mojang/blocklist/1.0.10/5c685c5ffa94c4cd39496c7184c1d122e515ecef/blocklist-1.0.10.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.mojang/brigadier/1.1.8/5244ce82c3337bba4a196a3ce858bfaecc74404a/brigadier-1.1.8.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.mojang/datafixerupper/6.0.8/3ba4a30557a9b057760af4011f909ba619fc5125/datafixerupper-6.0.8.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.mojang/patchy/2.2.10/da05971b07cbb379d002cf7eaec6a2048211fefc/patchy-2.2.10.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.mojang/text2speech/1.17.9/3cad216e3a7f0c19b4b394388bc9ffc446f13b14/text2speech-1.17.9.jar:/home/down/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.15/49d94806b6e3dc933dacbd8acb0fdbab8ebd1e5d/commons-codec-1.15.jar:/home/down/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar:/home/down/.gradle/caches/modules-2/files-2.1/io.netty/netty-buffer/4.1.82.Final/a544270cf1ae8b8077082f5036436a9a9971ea71/netty-buffer-4.1.82.Final.jar:/home/down/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec/4.1.82.Final/b77200379acb345a9ffdece1c605e591ac3e4e0a/netty-codec-4.1.82.Final.jar:/home/down/.gradle/caches/modules-2/files-2.1/io.netty/netty-common/4.1.82.Final/22d148e85c3f5ebdacc0ce1f5aabb1d420f73f3/netty-common-4.1.82.Final.jar:/home/down/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler/4.1.82.Final/644041d1fa96a5d3130a29e8978630d716d76e38/netty-handler-4.1.82.Final.jar:/home/down/.gradle/caches/modules-2/files-2.1/io.netty/netty-resolver/4.1.82.Final/38f665ae8dcd29032eea31245ba7806bed2e0fa8/netty-resolver-4.1.82.Final.jar:/home/down/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-classes-epoll/4.1.82.Final/e7c7dd18deac93105797f30057c912651ea76521/netty-transport-classes-epoll-4.1.82.Final.jar:/home/down/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-epoll/4.1.82.Final/476409d6255001ca53a55f65b01c13822f8dc93a/netty-transport-native-epoll-4.1.82.Final-linux-aarch_64.jar:/home/down/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-epoll/4.1.82.Final/c7350a71920f3ae9142945e25fed4846cce53374/netty-transport-native-epoll-4.1.82.Final-linux-x86_64.jar:/home/down/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-unix-common/4.1.82.Final/3e895b35ca1b8a0eca56cacff4c2dde5d2c6abce/netty-transport-native-unix-common-4.1.82.Final.jar:/home/down/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport/4.1.82.Final/e431a218d91acb6476ccad5f5aafde50aa3945ca/netty-transport-4.1.82.Final.jar:/home/down/.gradle/caches/modules-2/files-2.1/it.unimi.dsi/fastutil/8.5.9/bb7ea75ecdb216654237830b3a96d87ad91f8cc5/fastutil-8.5.9.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna-platform/5.12.1/97406a297c852f4a41e688a176ec675f72e8329/jna-platform-5.12.1.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.12.1/b1e93a735caea94f503e95e6fe79bf9cdc1e985d/jna-5.12.1.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.21/4ec95b60d4e86b5c95a0e919cb172a0af98011ef/commons-compress-1.21.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.13/e5f6cae5ca7ecaac1ec2827a9e2d65ae2869cada/httpclient-4.5.13.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.15/7f2e0c573eaa7a74bac2e89b359e1f73d92a0a1d/httpcore-4.4.15.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.joml/joml/1.10.5/22566d58af70ad3d72308bab63b8339906deb649/joml-1.10.5.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-jemalloc/3.3.2/877e17e39ebcd58a9c956dc3b5b777813de0873a/lwjgl-jemalloc-3.3.2.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-jemalloc/3.3.2/2bc33176cdfabf34a63df154b80914e8f433316b/lwjgl-jemalloc-3.3.2-natives-linux.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-openal/3.3.2/ae5357ed6d934546d3533993ea84c0cfb75eed95/lwjgl-openal-3.3.2.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-openal/3.3.2/650981780b8bbfb3ce43657b22ec8e77bfb1f37a/lwjgl-openal-3.3.2-natives-linux.jar:/home/down/.gradle/caches/fabric-loom/minecraftMaven/net/minecraft/forge-1.20.1-47.3.3-minecraft-merged/1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.1-v2-forge-1.20.1-47.3.3/forge-1.20.1-47.3.3-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.1-v2-forge-1.20.1-47.3.3.jar:/home/down/Desktop/itemplacer/1.20.1/.gradle/loom-cache/remapped_mods/net_fabricmc_yarn_1_20_1_1_20_1_build_1_v2_forge_1_20_1_47_3_3_forge/dev/architectury/architectury-forge/9.2.14/architectury-forge-9.2.14.jar:/home/down/Desktop/itemplacer/1.20.1/.gradle/loom-cache/remapped_mods/net_fabricmc_yarn_1_20_1_1_20_1_build_1_v2_forge_1_20_1_47_3_3_forge/me/shedaniel/cloth/cloth-config-forge/11.1.118/cloth-config-forge-11.1.118.jar:/home/down/Desktop/itemplacer/1.20.1/.gradle/loom-cache/remapped_mods/net_fabricmc_yarn_1_20_1_1_20_1_build_1_v2_forge_1_20_1_47_3_3_forge/blue/endless/jankson/1.2.0/jankson-1.2.0.jar:/home/down/Desktop/itemplacer/1.20.1/.gradle/loom-cache/remapped_mods/net_fabricmc_yarn_1_20_1_1_20_1_build_1_v2_forge_1_20_1_47_3_3_forge/com/moandjiezana/toml/toml4j/0.7.2/toml4j-0.7.2.jar:/home/down/Desktop/itemplacer/1.20.1/.gradle/loom-cache/remapped_mods/net_fabricmc_yarn_1_20_1_1_20_1_build_1_v2_forge_1_20_1_47_3_3_forge/org/yaml/snakeyaml/1.27/snakeyaml-1.27.jar:/home/down/Desktop/itemplacer/1.20.1/.gradle/loom-cache/remapped_mods/net_fabricmc_yarn_1_20_1_1_20_1_build_1_v2_forge_1_20_1_47_3_3_forge/com/google/code/gson/gson/2.8.1/gson-2.8.1.jar:/tmp/14157361720029599282.jar)
+	at com.sun.jna.NativeLibrary.loadLibrary(NativeLibrary.java:307) ~[jna-5.12.1.jar%23174!/:5.12.1 (b0)]
+	at com.sun.jna.NativeLibrary.getInstance(NativeLibrary.java:467) ~[jna-5.12.1.jar%23174!/:5.12.1 (b0)]
+	at com.sun.jna.NativeLibrary.getInstance(NativeLibrary.java:409) ~[jna-5.12.1.jar%23174!/:5.12.1 (b0)]
+	at com.mojang.text2speech.NarratorLinux$FliteLibrary.loadNative(NarratorLinux.java:67) ~[text2speech-1.17.9.jar%23159!/:?]
+	... 21 more
+	Suppressed: java.lang.UnsatisfiedLinkError: libflite.so: cannot open shared object file: No such file or directory
+		at com.sun.jna.Native.open(Native Method) ~[jna-5.12.1.jar%23174!/:5.12.1 (b0)]
+		at com.sun.jna.NativeLibrary.loadLibrary(NativeLibrary.java:197) ~[jna-5.12.1.jar%23174!/:5.12.1 (b0)]
+		at com.sun.jna.NativeLibrary.getInstance(NativeLibrary.java:467) ~[jna-5.12.1.jar%23174!/:5.12.1 (b0)]
+		at com.sun.jna.NativeLibrary.getInstance(NativeLibrary.java:409) ~[jna-5.12.1.jar%23174!/:5.12.1 (b0)]
+		at com.mojang.text2speech.NarratorLinux$FliteLibrary.loadNative(NarratorLinux.java:67) ~[text2speech-1.17.9.jar%23159!/:?]
+		at com.mojang.text2speech.NarratorLinux.<init>(NarratorLinux.java:18) ~[text2speech-1.17.9.jar%23159!/:?]
+		at com.mojang.text2speech.Narrator.getNarrator(Narrator.java:41) ~[text2speech-1.17.9.jar%23159!/:?]
+		at net.minecraft.client.util.NarratorManager.<init>(NarratorManager.java:19) ~[forge-1.20.1-47.3.3-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.1-v2-forge-1.20.1-47.3.3.jar%23185!/:?]
+		at net.minecraft.client.MinecraftClient.<init>(MinecraftClient.java:553) ~[forge-1.20.1-47.3.3-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.1-v2-forge-1.20.1-47.3.3.jar%23185!/:?]
+		at net.minecraft.client.main.Main.main(Main.java:182) ~[forge-1.20.1-47.3.3-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.1-v2-forge-1.20.1-47.3.3.jar%23185!/:?]
+		at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+		at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+		at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:111) ~[fmlloader-1.20.1-47.3.3.jar%2393!/:?]
+		at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:99) ~[fmlloader-1.20.1-47.3.3.jar%2393!/:?]
+		at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.devService(ForgeClientUserdevLaunchHandler.java:19) ~[fmlloader-1.20.1-47.3.3.jar%2393!/:?]
+		at net.minecraftforge.fml.loading.targets.CommonDevLaunchHandler.lambda$makeService$7(CommonDevLaunchHandler.java:135) ~[fmlloader-1.20.1-47.3.3.jar%2393!/:?]
+		at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) ~[modlauncher-10.0.9.jar%2397!/:?]
+		at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) ~[modlauncher-10.0.9.jar%2397!/:?]
+		at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) ~[modlauncher-10.0.9.jar%2397!/:?]
+		at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) ~[modlauncher-10.0.9.jar%2397!/:?]
+		at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar%2397!/:?]
+		at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar%2397!/:?]
+		at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar%2397!/:?]
+		at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[?:?]
+		at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) ~[dev-launch-injector-0.2.1+build.8.jar%23183!/:?]
+		at dev.architectury.transformer.TransformerRuntime.main(TransformerRuntime.java:220) ~[?:?]
+	Suppressed: java.lang.UnsatisfiedLinkError: libflite.so: cannot open shared object file: No such file or directory
+		at com.sun.jna.Native.open(Native Method) ~[jna-5.12.1.jar%23174!/:5.12.1 (b0)]
+		at com.sun.jna.NativeLibrary.loadLibrary(NativeLibrary.java:210) ~[jna-5.12.1.jar%23174!/:5.12.1 (b0)]
+		at com.sun.jna.NativeLibrary.getInstance(NativeLibrary.java:467) ~[jna-5.12.1.jar%23174!/:5.12.1 (b0)]
+		at com.sun.jna.NativeLibrary.getInstance(NativeLibrary.java:409) ~[jna-5.12.1.jar%23174!/:5.12.1 (b0)]
+		at com.mojang.text2speech.NarratorLinux$FliteLibrary.loadNative(NarratorLinux.java:67) ~[text2speech-1.17.9.jar%23159!/:?]
+		at com.mojang.text2speech.NarratorLinux.<init>(NarratorLinux.java:18) ~[text2speech-1.17.9.jar%23159!/:?]
+		at com.mojang.text2speech.Narrator.getNarrator(Narrator.java:41) ~[text2speech-1.17.9.jar%23159!/:?]
+		at net.minecraft.client.util.NarratorManager.<init>(NarratorManager.java:19) ~[forge-1.20.1-47.3.3-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.1-v2-forge-1.20.1-47.3.3.jar%23185!/:?]
+		at net.minecraft.client.MinecraftClient.<init>(MinecraftClient.java:553) ~[forge-1.20.1-47.3.3-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.1-v2-forge-1.20.1-47.3.3.jar%23185!/:?]
+		at net.minecraft.client.main.Main.main(Main.java:182) ~[forge-1.20.1-47.3.3-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.1-v2-forge-1.20.1-47.3.3.jar%23185!/:?]
+		at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+		at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+		at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:111) ~[fmlloader-1.20.1-47.3.3.jar%2393!/:?]
+		at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:99) ~[fmlloader-1.20.1-47.3.3.jar%2393!/:?]
+		at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.devService(ForgeClientUserdevLaunchHandler.java:19) ~[fmlloader-1.20.1-47.3.3.jar%2393!/:?]
+		at net.minecraftforge.fml.loading.targets.CommonDevLaunchHandler.lambda$makeService$7(CommonDevLaunchHandler.java:135) ~[fmlloader-1.20.1-47.3.3.jar%2393!/:?]
+		at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) ~[modlauncher-10.0.9.jar%2397!/:?]
+		at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) ~[modlauncher-10.0.9.jar%2397!/:?]
+		at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) ~[modlauncher-10.0.9.jar%2397!/:?]
+		at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) ~[modlauncher-10.0.9.jar%2397!/:?]
+		at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar%2397!/:?]
+		at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar%2397!/:?]
+		at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar%2397!/:?]
+		at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[?:?]
+		at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) ~[dev-launch-injector-0.2.1+build.8.jar%23183!/:?]
+		at dev.architectury.transformer.TransformerRuntime.main(TransformerRuntime.java:220) ~[?:?]
+	Suppressed: java.io.IOException: Native library (linux-x86-64/libflite.so) not found in resource path (/home/down/Desktop/itemplacer/1.20.1/forge/build/classes/java/main:/home/down/Desktop/itemplacer/1.20.1/forge/build/resources/main:/home/down/.gradle/caches/fabric-loom/1.20.1/forge/1.20.1-47.3.3/client-extra.jar:/home/down/.gradle/caches/fabric-loom/1.20.1/net.fabricmc.yarn.1_20_1.1.20.1+build.1-v2-forge-1.20.1-47.3.3/mappings.jar:/home/down/.gradle/caches/modules-2/files-2.1/dev.architectury/architectury-transformer/5.2.87/c81d58e13fbd902ba5d909126733b9e3771c4395/architectury-transformer-5.2.87-agent.jar:/home/down/.gradle/caches/modules-2/files-2.1/dev.architectury/architectury-transformer/5.2.87/980814ce433a3396de4495194f027dfecc94bb3a/architectury-transformer-5.2.87-runtime.jar:/home/down/Desktop/itemplacer/1.20.1/common/build/devlibs/itemplacer-common-1.9-dev.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlearlydisplay/1.20.1-47.3.3/15fb636ae8d7f28541873205683c9dd1d32c1f27/fmlearlydisplay-1.20.1-47.3.3.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/javafmllanguage/1.20.1-47.3.3/610ba8d1592416039cb07430af193c49267c524e/javafmllanguage-1.20.1-47.3.3.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/lowcodelanguage/1.20.1-47.3.3/12de970e4bc1ff56a1c64ecd1c2d942413a50556/lowcodelanguage-1.20.1-47.3.3.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/mclanguage/1.20.1-47.3.3/95059649e9606aac5fd660447993476841990a4c/mclanguage-1.20.1-47.3.3.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/fmlcore/1.20.1-47.3.3/9844c9b5b187fe9089f9ea36ad414fe8d3ca13fe/fmlcore-1.20.1-47.3.3.jar:/home/down/.gradle/caches/fabric-loom/forge/transformed-dependencies-v1/net/minecraftforge/69d22e3ac976199c9cfd3709f2fbfa4640f092e164183b78c974ea894bce4e3b/fmlloader/1.20.1-47.3.3/fmlloader-1.20.1-47.3.3.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/forgespi/7.0.1/3b4972a0cdb135853dba219be61a79b22cff1309/forgespi-7.0.1.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/accesstransformers/8.0.4/272d240aa73f42195b2a68e2ebd8b701ecf41f63/accesstransformers-8.0.4.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/eventbus/6.0.5/699143dd438431d06b57416944f7cedbe52e1475/eventbus-6.0.5.jar:/home/down/.gradle/caches/modules-2/files-2.1/cpw.mods/modlauncher/10.0.9/6d9443f56f50bb85cea383686ff9c867391458b/modlauncher-10.0.9.jar:/home/down/.gradle/caches/modules-2/files-2.1/cpw.mods/bootstraplauncher/1.1.2/c546e00443d8432cda6baa1c860346980742628/bootstraplauncher-1.1.2.jar:/home/down/.gradle/caches/modules-2/files-2.1/cpw.mods/securejarhandler/2.1.10/51e6a22c6c716beb11e244bf5b8be480f51dd6b5/securejarhandler-2.1.10.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/coremods/5.1.6/62fab3c3d59d37f8e15af311cb638c6f6123423/coremods-5.1.6.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.openjdk.nashorn/nashorn-core/15.3/43977e804697048fc8d81d333a36c17d07a5b3dd/nashorn-core-15.3.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-commons/9.7/e86dda4696d3c185fcc95d8d311904e7ce38a53f/asm-commons-9.7.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/mergetool/1.1.5/f3da18e12c696d35a47c82cbb2cc8b5aa15e1154/mergetool-1.1.5-api.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-util/9.7/c0655519f24d92af2202cb681cd7c1569df6ead6/asm-util-9.7.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-analysis/9.7/e4a258b7eb96107106c0599f0061cfc1832fe07a/asm-analysis-9.7.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-tree/9.7/e446a17b175bfb733b87c5c2560ccb4e57d69f1a/asm-tree-9.7.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/9.7/73d7b3086e14beb604ced229c302feff6449723/asm-9.7.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.antlr/antlr4/4.9.1/e92af8ab33e428461927b484e90bb155a4f3a052/antlr4-4.9.1.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.antlr/antlr4-runtime/4.9.1/428664f05d2b7f7b7610204b5aa7c1763f62011a/antlr4-runtime-4.9.1.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/unsafe/0.2.0/54d7a0a5e8fdb71b973025caa46f341ae5904f39/unsafe-0.2.0.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.electronwill.night-config/toml/3.6.4/51d6cefb2b55ee55ee26b16391212fb2c7dfb4f4/toml-3.6.4.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.electronwill.night-config/core/3.6.4/510f174abbf1c947494db50ef2445683bd52c230/core-3.6.4.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/JarJarSelector/0.3.19/376cc9c8ea60720cf027c01fc033de915699801c/JarJarSelector-0.3.19.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/JarJarMetadata/0.3.19/83feaa9b770e6ac0e96ee4fc23fa89325c5fe2/JarJarMetadata-0.3.19.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.8.5/4433f50c07debefaed0553bd0068f4f48d449313/maven-artifact-3.8.5.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.jodah/typetools/0.6.3/a01aaa6ddaea9ec07ec4f209487b7a46a526283a/typetools-0.6.3.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecrell/terminalconsoleappender/1.3.0/b562e9bb61235c9520e26282cdee71f8f802d1fc/terminalconsoleappender-1.3.0.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.jline/jline-reader/3.20.0/8f15415b022a25b473e8e16c28ae913186ffb9c4/jline-reader-3.20.0.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.jline/jline-terminal/3.20.0/d0ddcc708ddf527a3454c941b7b9225cc83a15ff/jline-terminal-3.20.0.jar:/home/down/.gradle/caches/modules-2/files-2.1/dev.architectury/mixin-patched/0.8.5.11/dd886ad7af30604cbd9aa0f1eb9fb95b079013ca/mixin-patched-0.8.5.11.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/JarJarFileSystems/0.3.19/2464eb7d6b9ddb9db36a82cf8a95193e5c6fe020/JarJarFileSystems-0.3.19.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.sf.jopt-simple/jopt-simple/5.0.4/4fdac2fbe92dfad86aa6e9301736f6b4342a3f5c/jopt-simple-5.0.4.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.mojang/logging/1.1.1/832b8e6674a9b325a5175a3a6267dfaf34c85139/logging-1.1.1.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.19.0/3b6eeb4de4c49c0fe38a4ee27188ff5fee44d0bb/log4j-core-2.19.0.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-slf4j2-impl/2.19.0/5c04bfdd63ce9dceb2e284b81e96b6a70010ee10/log4j-slf4j2-impl-2.19.0.jar:/home/down/.gradle/caches/modules-2/files-2.1/io.github.juuxel/unprotect/1.2.0/49cc229a0469f28fae41593a9537743ac6a951dc/unprotect-1.2.0.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.19.0/ea1b37f38c327596b216542bc636cfdc0b8036fa/log4j-api-2.19.0.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.minecraftforge/srgutils/0.4.11/fbad1341ffdb47d276bbdc40ecb06da49e053e74/srgutils-0.4.11.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.codehaus.plexus/plexus-utils/3.3.0/cf43b5391de623b36fe066a21127baef82c64022/plexus-utils-3.3.0.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.12.0/c6842c86792ff03b9f1d1fe2aab8dc23aa6c6f0e/commons-lang3-3.12.0.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.10/dd9b193aef96e973d5a11ab13cd17430c2e4306b/gson-2.10.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/31.1-jre/60458f877d055d0c9114d9e1a2efb737b4bc282c/guava-31.1-jre.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.machinezoo.noexception/noexception/1.7.1/b65330c98e38a1f915fa54a6e5eca496505e3f0a/noexception-1.7.1.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-simple/1.7.30/e606eac955f55ecf1d8edcccba04eb8ac98088dd/slf4j-simple-1.7.30.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/2.0.1/f48d81adce2abf5ad3cfe463df517952749e03bc/slf4j-api-2.0.1.jar:/home/down/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.11.0/a2503f302b11ebde7ebc3df41daebe0e4eea3689/commons-io-2.11.0.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-glfw/3.3.2/757920418805fb90bfebb3d46b1d9e7669fca2eb/lwjgl-glfw-3.3.2.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-glfw/3.3.2/766bb0e8e829598b1c8052fd8173c62af741c52/lwjgl-glfw-3.3.2-natives-linux.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-opengl/3.3.2/ee8e95be0b438602038bc1f02dc5e3d011b1b216/lwjgl-opengl-3.3.2.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-opengl/3.3.2/b8368430ef0d91a5acbc6fbfa47b20c3ec083aec/lwjgl-opengl-3.3.2-natives-linux.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-stb/3.3.2/a2550795014d622b686e9caac50b14baa87d2c70/lwjgl-stb-3.3.2.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-stb/3.3.2/5c987f43b342d722b54970159040af76f1c87403/lwjgl-stb-3.3.2-natives-linux.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-tinyfd/3.3.2/9f65c248dd77934105274fcf8351abb75b34327c/lwjgl-tinyfd-3.3.2.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-tinyfd/3.3.2/5d27fc67172b3fcd8400d61a7cfb75da881f609/lwjgl-tinyfd-3.3.2-natives-linux.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.3.2/4421d94af68e35dcaa31737a6fc59136a1e61b94/lwjgl-3.3.2.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl/3.3.2/767684973f259d97e7dc66a125eb153986f177e7/lwjgl-3.3.2-natives-linux.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.antlr/ST4/4.3/92f2c1ad8d84abcbeead6cf7f2c53a04166293c2/ST4-4.3.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.antlr/antlr-runtime/3.5.2/cd9cd41361c155f3af0f653009dcecb08d8b4afd/antlr-runtime-3.5.2.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.abego.treelayout/org.abego.treelayout.core/1.0.3/457216e8e6578099ae63667bb1e4439235892028/org.abego.treelayout.core-1.0.3.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.glassfish/javax.json/1.0.4/3178f73569fd7a1e5ffc464e680f7a8cc784b85a/javax.json-1.0.4.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.ibm.icu/icu4j/71.1/9e7d3304c23f9ba5cb71915f7cce23231a57a445/icu4j-71.1.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.google.guava/failureaccess/1.0.1/1dcf1de382a0bf95a3d8b0849546c88bac1292c9/failureaccess-1.0.1.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.google.guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/b421526c5f297295adef1c886e5246c39d4ac629/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/3.12.0/d5692f0526415fcc6de94bb5bfbd3afd9dd3b3e5/checker-qual-3.12.0.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.11.0/c5a0ace696d3f8b1c1d8cc036d8c03cc0cbe6b69/error_prone_annotations-2.11.0.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.3/ba035118bc8bac37d7eff77700720999acd9986d/j2objc-annotations-1.3.jar:/home/down/.gradle/caches/modules-2/files-2.1/dev.architectury/architectury-naming-service/2.0.9/c4c4732b3a00b67523c3028b49af402402be7883/architectury-naming-service-2.0.9.jar:/home/down/.gradle/caches/modules-2/files-2.1/dev.architectury/architectury-mixin-remapper-service/2.0.9/eede5ef35349f2b295fe1f3e7579382d26784b24/architectury-mixin-remapper-service-2.0.9.jar:/home/down/.gradle/caches/modules-2/files-2.1/dev.architectury/mcp-annotations/2.0.9/84f3d1e27805912592af0289d6fce0be53ee689a/mcp-annotations-2.0.9.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.fabricmc/dev-launch-injector/0.2.1+build.8/da8bef7e6e2f952da707f282bdb46882a0fce5e3/dev-launch-injector-0.2.1+build.8.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.2.2/54f5efc19bca95d709d9a37d19ffcbba3d21c1a6/oshi-core-6.2.2.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.mojang/authlib/4.0.43/2ff9d747a77570a07a60d32ac77eb6162ad2a2d9/authlib-4.0.43.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.mojang/blocklist/1.0.10/5c685c5ffa94c4cd39496c7184c1d122e515ecef/blocklist-1.0.10.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.mojang/brigadier/1.1.8/5244ce82c3337bba4a196a3ce858bfaecc74404a/brigadier-1.1.8.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.mojang/datafixerupper/6.0.8/3ba4a30557a9b057760af4011f909ba619fc5125/datafixerupper-6.0.8.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.mojang/patchy/2.2.10/da05971b07cbb379d002cf7eaec6a2048211fefc/patchy-2.2.10.jar:/home/down/.gradle/caches/modules-2/files-2.1/com.mojang/text2speech/1.17.9/3cad216e3a7f0c19b4b394388bc9ffc446f13b14/text2speech-1.17.9.jar:/home/down/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.15/49d94806b6e3dc933dacbd8acb0fdbab8ebd1e5d/commons-codec-1.15.jar:/home/down/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar:/home/down/.gradle/caches/modules-2/files-2.1/io.netty/netty-buffer/4.1.82.Final/a544270cf1ae8b8077082f5036436a9a9971ea71/netty-buffer-4.1.82.Final.jar:/home/down/.gradle/caches/modules-2/files-2.1/io.netty/netty-codec/4.1.82.Final/b77200379acb345a9ffdece1c605e591ac3e4e0a/netty-codec-4.1.82.Final.jar:/home/down/.gradle/caches/modules-2/files-2.1/io.netty/netty-common/4.1.82.Final/22d148e85c3f5ebdacc0ce1f5aabb1d420f73f3/netty-common-4.1.82.Final.jar:/home/down/.gradle/caches/modules-2/files-2.1/io.netty/netty-handler/4.1.82.Final/644041d1fa96a5d3130a29e8978630d716d76e38/netty-handler-4.1.82.Final.jar:/home/down/.gradle/caches/modules-2/files-2.1/io.netty/netty-resolver/4.1.82.Final/38f665ae8dcd29032eea31245ba7806bed2e0fa8/netty-resolver-4.1.82.Final.jar:/home/down/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-classes-epoll/4.1.82.Final/e7c7dd18deac93105797f30057c912651ea76521/netty-transport-classes-epoll-4.1.82.Final.jar:/home/down/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-epoll/4.1.82.Final/476409d6255001ca53a55f65b01c13822f8dc93a/netty-transport-native-epoll-4.1.82.Final-linux-aarch_64.jar:/home/down/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-epoll/4.1.82.Final/c7350a71920f3ae9142945e25fed4846cce53374/netty-transport-native-epoll-4.1.82.Final-linux-x86_64.jar:/home/down/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-unix-common/4.1.82.Final/3e895b35ca1b8a0eca56cacff4c2dde5d2c6abce/netty-transport-native-unix-common-4.1.82.Final.jar:/home/down/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport/4.1.82.Final/e431a218d91acb6476ccad5f5aafde50aa3945ca/netty-transport-4.1.82.Final.jar:/home/down/.gradle/caches/modules-2/files-2.1/it.unimi.dsi/fastutil/8.5.9/bb7ea75ecdb216654237830b3a96d87ad91f8cc5/fastutil-8.5.9.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna-platform/5.12.1/97406a297c852f4a41e688a176ec675f72e8329/jna-platform-5.12.1.jar:/home/down/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.12.1/b1e93a735caea94f503e95e6fe79bf9cdc1e985d/jna-5.12.1.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.21/4ec95b60d4e86b5c95a0e919cb172a0af98011ef/commons-compress-1.21.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.13/e5f6cae5ca7ecaac1ec2827a9e2d65ae2869cada/httpclient-4.5.13.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.15/7f2e0c573eaa7a74bac2e89b359e1f73d92a0a1d/httpcore-4.4.15.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.joml/joml/1.10.5/22566d58af70ad3d72308bab63b8339906deb649/joml-1.10.5.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-jemalloc/3.3.2/877e17e39ebcd58a9c956dc3b5b777813de0873a/lwjgl-jemalloc-3.3.2.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-jemalloc/3.3.2/2bc33176cdfabf34a63df154b80914e8f433316b/lwjgl-jemalloc-3.3.2-natives-linux.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-openal/3.3.2/ae5357ed6d934546d3533993ea84c0cfb75eed95/lwjgl-openal-3.3.2.jar:/home/down/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-openal/3.3.2/650981780b8bbfb3ce43657b22ec8e77bfb1f37a/lwjgl-openal-3.3.2-natives-linux.jar:/home/down/.gradle/caches/fabric-loom/minecraftMaven/net/minecraft/forge-1.20.1-47.3.3-minecraft-merged/1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.1-v2-forge-1.20.1-47.3.3/forge-1.20.1-47.3.3-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.1-v2-forge-1.20.1-47.3.3.jar:/home/down/Desktop/itemplacer/1.20.1/.gradle/loom-cache/remapped_mods/net_fabricmc_yarn_1_20_1_1_20_1_build_1_v2_forge_1_20_1_47_3_3_forge/dev/architectury/architectury-forge/9.2.14/architectury-forge-9.2.14.jar:/home/down/Desktop/itemplacer/1.20.1/.gradle/loom-cache/remapped_mods/net_fabricmc_yarn_1_20_1_1_20_1_build_1_v2_forge_1_20_1_47_3_3_forge/me/shedaniel/cloth/cloth-config-forge/11.1.118/cloth-config-forge-11.1.118.jar:/home/down/Desktop/itemplacer/1.20.1/.gradle/loom-cache/remapped_mods/net_fabricmc_yarn_1_20_1_1_20_1_build_1_v2_forge_1_20_1_47_3_3_forge/blue/endless/jankson/1.2.0/jankson-1.2.0.jar:/home/down/Desktop/itemplacer/1.20.1/.gradle/loom-cache/remapped_mods/net_fabricmc_yarn_1_20_1_1_20_1_build_1_v2_forge_1_20_1_47_3_3_forge/com/moandjiezana/toml/toml4j/0.7.2/toml4j-0.7.2.jar:/home/down/Desktop/itemplacer/1.20.1/.gradle/loom-cache/remapped_mods/net_fabricmc_yarn_1_20_1_1_20_1_build_1_v2_forge_1_20_1_47_3_3_forge/org/yaml/snakeyaml/1.27/snakeyaml-1.27.jar:/home/down/Desktop/itemplacer/1.20.1/.gradle/loom-cache/remapped_mods/net_fabricmc_yarn_1_20_1_1_20_1_build_1_v2_forge_1_20_1_47_3_3_forge/com/google/code/gson/gson/2.8.1/gson-2.8.1.jar:/tmp/14157361720029599282.jar)
+		at com.sun.jna.Native.extractFromResourcePath(Native.java:1145) ~[jna-5.12.1.jar%23174!/:5.12.1 (b0)]
+		at com.sun.jna.NativeLibrary.loadLibrary(NativeLibrary.java:281) ~[jna-5.12.1.jar%23174!/:5.12.1 (b0)]
+		at com.sun.jna.NativeLibrary.getInstance(NativeLibrary.java:467) ~[jna-5.12.1.jar%23174!/:5.12.1 (b0)]
+		at com.sun.jna.NativeLibrary.getInstance(NativeLibrary.java:409) ~[jna-5.12.1.jar%23174!/:5.12.1 (b0)]
+		at com.mojang.text2speech.NarratorLinux$FliteLibrary.loadNative(NarratorLinux.java:67) ~[text2speech-1.17.9.jar%23159!/:?]
+		at com.mojang.text2speech.NarratorLinux.<init>(NarratorLinux.java:18) ~[text2speech-1.17.9.jar%23159!/:?]
+		at com.mojang.text2speech.Narrator.getNarrator(Narrator.java:41) ~[text2speech-1.17.9.jar%23159!/:?]
+		at net.minecraft.client.util.NarratorManager.<init>(NarratorManager.java:19) ~[forge-1.20.1-47.3.3-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.1-v2-forge-1.20.1-47.3.3.jar%23185!/:?]
+		at net.minecraft.client.MinecraftClient.<init>(MinecraftClient.java:553) ~[forge-1.20.1-47.3.3-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.1-v2-forge-1.20.1-47.3.3.jar%23185!/:?]
+		at net.minecraft.client.main.Main.main(Main.java:182) ~[forge-1.20.1-47.3.3-minecraft-merged-1.20.1-net.fabricmc.yarn.1_20_1.1.20.1+build.1-v2-forge-1.20.1-47.3.3.jar%23185!/:?]
+		at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+		at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+		at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:111) ~[fmlloader-1.20.1-47.3.3.jar%2393!/:?]
+		at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:99) ~[fmlloader-1.20.1-47.3.3.jar%2393!/:?]
+		at net.minecraftforge.fml.loading.targets.ForgeClientUserdevLaunchHandler.devService(ForgeClientUserdevLaunchHandler.java:19) ~[fmlloader-1.20.1-47.3.3.jar%2393!/:?]
+		at net.minecraftforge.fml.loading.targets.CommonDevLaunchHandler.lambda$makeService$7(CommonDevLaunchHandler.java:135) ~[fmlloader-1.20.1-47.3.3.jar%2393!/:?]
+		at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) ~[modlauncher-10.0.9.jar%2397!/:?]
+		at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) ~[modlauncher-10.0.9.jar%2397!/:?]
+		at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) ~[modlauncher-10.0.9.jar%2397!/:?]
+		at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) ~[modlauncher-10.0.9.jar%2397!/:?]
+		at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar%2397!/:?]
+		at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar%2397!/:?]
+		at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar%2397!/:?]
+		at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[?:?]
+		at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) ~[dev-launch-injector-0.2.1+build.8.jar%23183!/:?]
+		at dev.architectury.transformer.TransformerRuntime.main(TransformerRuntime.java:220) ~[?:?]
+[16Aug2024 16:53:08.067] [Render thread/INFO] [net.minecraft.resource.ReloadableResourceManagerImpl/]: Reloading ResourceManager: vanilla, mod_resources
+[16Aug2024 16:53:08.117] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[16Aug2024 16:53:08.119] [Worker-Main-2/INFO] [net.minecraft.client.font.UnihexFont/]: Found unifont_all_no_pua-15.0.06.hex, loading
+[16Aug2024 16:53:08.475] [Worker-Main-6/WARN] [net.minecraft.client.render.model.ModelLoader/]: Exception loading blockstate definition: 'itemplacer:blockstates/laying_item.json' missing model for variant: 'itemplacer:laying_item#waterlogged=false'
+[16Aug2024 16:53:08.476] [Worker-Main-6/WARN] [net.minecraft.client.render.model.ModelLoader/]: Exception loading blockstate definition: 'itemplacer:blockstates/laying_item.json' missing model for variant: 'itemplacer:laying_item#waterlogged=true'
+[16Aug2024 16:53:08.513] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: OUTDATED Current: 47.3.3 Target: 47.3.5
+[16Aug2024 16:53:09.183] [Render thread/WARN] [net.minecraft.client.sound.SoundSystem/]: Missing sound for event: minecraft:item.goat_horn.play
+[16Aug2024 16:53:09.183] [Render thread/WARN] [net.minecraft.client.sound.SoundSystem/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[16Aug2024 16:53:09.199] [Render thread/INFO] [net.minecraft.client.sound.SoundEngine/]: OpenAL initialized on device Built-in Audio Analog Stereo
+[16Aug2024 16:53:09.199] [Render thread/INFO] [net.minecraft.client.sound.SoundSystem/SOUNDS]: Sound engine started
+[16Aug2024 16:53:09.266] [Render thread/INFO] [net.minecraft.client.texture.SpriteAtlasTexture/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[16Aug2024 16:53:09.272] [Render thread/INFO] [net.minecraft.client.texture.SpriteAtlasTexture/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[16Aug2024 16:53:09.273] [Render thread/INFO] [net.minecraft.client.texture.SpriteAtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[16Aug2024 16:53:09.273] [Render thread/INFO] [net.minecraft.client.texture.SpriteAtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[16Aug2024 16:53:09.273] [Render thread/INFO] [net.minecraft.client.texture.SpriteAtlasTexture/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[16Aug2024 16:53:09.276] [Render thread/INFO] [net.minecraft.client.texture.SpriteAtlasTexture/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[16Aug2024 16:53:09.277] [Render thread/INFO] [net.minecraft.client.texture.SpriteAtlasTexture/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[16Aug2024 16:53:09.277] [Render thread/INFO] [net.minecraft.client.texture.SpriteAtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[16Aug2024 16:53:09.277] [Render thread/INFO] [net.minecraft.client.texture.SpriteAtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[16Aug2024 16:53:09.393] [Render thread/WARN] [net.minecraft.client.gl.ShaderProgram/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[16Aug2024 16:53:09.418] [Render thread/INFO] [net.minecraft.client.texture.SpriteAtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[16Aug2024 16:53:09.419] [Render thread/INFO] [net.minecraft.client.texture.SpriteAtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[16Aug2024 16:53:09.419] [Render thread/INFO] [net.minecraft.client.texture.SpriteAtlasTexture/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[16Aug2024 16:53:09.960] [Realms Notification Availability checker #1/INFO] [net.minecraft.client.realms.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
+[16Aug2024 16:53:17.417] [Render thread/WARN] [net.minecraftforge.common.ForgeHooks/WP]: The following mods have version differences that were not resolved:
+generated_c8fe43e (version 1 -> MISSING)
+Things may not work well.
+[16Aug2024 16:53:17.636] [Render thread/WARN] [net.minecraft.server.MinecraftServer/]: Missing data pack mod:generated_c8fe43e
+[16Aug2024 16:53:18.157] [Render thread/INFO] [net.minecraft.recipe.RecipeManager/]: Loaded 7 recipes
+[16Aug2024 16:53:18.203] [Render thread/INFO] [net.minecraft.advancement.AdvancementManager/]: Loaded 1271 advancements
+[16Aug2024 16:53:18.435] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Starting integrated minecraft server version 1.20.1
+[16Aug2024 16:53:18.435] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[16Aug2024 16:53:19.049] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[16Aug2024 16:53:20.126] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 0%
+[16Aug2024 16:53:20.127] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 0%
+[16Aug2024 16:53:20.127] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Preparing spawn area: 0%
+[16Aug2024 16:53:20.495] [Render thread/INFO] [net.minecraft.server.WorldGenerationProgressLogger/]: Time elapsed: 1435 ms
+[16Aug2024 16:53:20.497] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[16Aug2024 16:53:20.561] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Changing view distance to 12, from 10
+[16Aug2024 16:53:20.562] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Changing simulation distance to 12, from 0
+[16Aug2024 16:53:20.616] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
+[16Aug2024 16:53:20.871] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
+[16Aug2024 16:53:20.894] [Server thread/INFO] [net.minecraft.server.PlayerManager/]: Dev[local:E:3b98e7f6] logged in with entity id 193 at (14.110123284166768, 63.0, -122.34823191172515)
+[16Aug2024 16:53:20.918] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[16Aug2024 16:53:21.155] [Render thread/INFO] [net.minecraft.advancement.AdvancementManager/]: Loaded 13 advancements
+[16Aug2024 16:53:21.937] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:21.951] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:21.967] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:21.977] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:21.990] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.007] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.017] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.030] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.044] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.061] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.070] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.084] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.096] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.114] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.123] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.141] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.153] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.163] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.176] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.189] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.206] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.216] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.229] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.243] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.258] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.270] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.283] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.297] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.312] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.323] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.336] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.723] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.736] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:22.749] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:23.069] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:23.083] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:23.098] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:23.114] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:23.123] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:23.142] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:23.151] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:23.445] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:23.723] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:23.737] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:23.751] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:23.965] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:23.976] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:23.991] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.005] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.017] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.030] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.043] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.323] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.336] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.351] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.367] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.376] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.390] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.404] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.416] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.430] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.443] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.463] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.470] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.487] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.497] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.511] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.523] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.537] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.818] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.830] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.843] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.858] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.870] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.883] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.896] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.912] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.923] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.937] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.952] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.963] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.976] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:24.990] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:25.009] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:25.017] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:25.031] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:25.045] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:25.063] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:25.070] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:25.084] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:25.099] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:25.372] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:25.386] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:25.399] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:25.414] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:25.426] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:25.439] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:25.454] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:25.466] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:25.479] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:25.493] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:25.666] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:25.679] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:25.693] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.267] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.281] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.294] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.313] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.320] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.334] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.347] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.362] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.374] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.388] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.410] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.415] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.427] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.442] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.462] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.468] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.482] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.499] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.682] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.695] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.827] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.843] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.860] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.873] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.882] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.895] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.914] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.922] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.935] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.950] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.966] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.975] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:26.989] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.008] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.015] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.028] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.042] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.061] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.068] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.083] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.096] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.214] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.227] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.241] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.256] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.267] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.281] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.295] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.310] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.322] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.335] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.349] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.365] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.377] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.389] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.408] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.414] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.429] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.443] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.463] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.468] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.482] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.494] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.683] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.695] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.711] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.722] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.736] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.749] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.767] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.775] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.789] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.809] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.815] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.828] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.842] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.860] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.869] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.883] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:27.896] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.029] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.042] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.058] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.068] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.082] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.095] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.110] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.122] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.135] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.149] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.165] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.175] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.190] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.209] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.216] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.228] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.242] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.257] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.269] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.283] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.296] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.469] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.482] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.496] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.516] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.522] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.535] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.549] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.565] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.576] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.589] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.604] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.618] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.633] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.648] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.658] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.668] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.683] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:28.697] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.392] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.393] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.418] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.419] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.432] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.445] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.460] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.473] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.487] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.501] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.516] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.527] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.540] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.557] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.566] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.581] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.594] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.611] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.620] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.634] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.647] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.663] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.673] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.698] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.699] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.725] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.726] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.738] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.755] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.780] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.791] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.805] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.809] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.833] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.834] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.859] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.861] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.885] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.888] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.912] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.915] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.938] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.940] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.966] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.968] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:33.983] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.006] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.010] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.034] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.045] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.062] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.074] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.077] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.103] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.114] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.129] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.140] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.155] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.168] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.182] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.185] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.209] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.221] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.235] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.249] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.263] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.273] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.285] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.299] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.312] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.314] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.338] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.339] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.352] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.364] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.377] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.391] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.405] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.417] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.432] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.444] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.927] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.939] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.955] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.965] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:34.986] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.010] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.021] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.034] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.046] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.061] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.078] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.093] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.110] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.134] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.137] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.147] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.165] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.172] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.188] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.201] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.218] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.229] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.242] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.261] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.267] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.280] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.295] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.313] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.321] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.334] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.348] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.363] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.374] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.388] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.401] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.421] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.428] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.452] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.455] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.467] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.481] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.494] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.512] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.521] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.534] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.548] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.564] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.575] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.587] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.606] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.614] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.626] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.640] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.655] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.679] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.680] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.693] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.707] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.720] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.734] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.748] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.765] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.775] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.790] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.802] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.819] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.827] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.840] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.855] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.867] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.880] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.893] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.915] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.923] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.933] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.947] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[16Aug2024 16:53:35.948] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.956] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[16Aug2024 16:53:35.962] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.975] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:35.982] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[16Aug2024 16:53:35.983] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[16Aug2024 16:53:35.991] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.001] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.013] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.026] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.039] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.053] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.066] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.080] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.094] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.107] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.121] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.135] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.149] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.160] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.173] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.189] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.202] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.214] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.228] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.242] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.255] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.268] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.282] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.293] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.308] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.321] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.335] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.348] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.361] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.375] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.389] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.401] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.414] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.429] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.443] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.455] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.468] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.482] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.495] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.508] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.521] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.535] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.548] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.580] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.587] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.596] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.604] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.613] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.626] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.640] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.653] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.666] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.680] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.693] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.706] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.720] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.735] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.747] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.761] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.775] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.789] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.802] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.815] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.829] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.842] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.855] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.867] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.880] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.893] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.906] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.920] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.933] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.946] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.959] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.973] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:36.986] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.001] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.015] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.028] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.042] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.055] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.069] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.082] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.095] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.108] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.122] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.137] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.148] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.162] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.175] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.189] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.202] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.215] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.229] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.242] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.255] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.268] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.282] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.295] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.308] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.322] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.336] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.354] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.362] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.374] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.388] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.402] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.415] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.429] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.440] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.454] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.466] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.480] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.493] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.507] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.522] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.536] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.548] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.561] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.575] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.589] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.602] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.615] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.628] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.643] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.655] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.676] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.691] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.699] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.707] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.720] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.733] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.748] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.762] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.776] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.789] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.802] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.815] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.828] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.842] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.855] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.868] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.880] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.893] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.907] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.934] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.942] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.951] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.961] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.975] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:37.990] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.002] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.015] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.028] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.043] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.055] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.068] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.083] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.094] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.109] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.122] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.136] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.149] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.162] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.176] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.189] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.200] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.215] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.229] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.243] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.255] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.269] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.280] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.294] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.308] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.322] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.336] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.349] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.362] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.375] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.389] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.402] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.416] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.428] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.443] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.456] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.469] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.483] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.495] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.524] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.533] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.540] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.549] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.562] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.573] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.587] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.602] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.616] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.629] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.643] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.653] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.667] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.680] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.695] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.709] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.722] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.736] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.749] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.762] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.776] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.789] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.802] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.816] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.829] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.843] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.855] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.869] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.882] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.949] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.957] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.966] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.974] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.983] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:38.991] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.001] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.015] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.028] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.042] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.055] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.068] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.082] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.095] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.108] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.122] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.136] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.148] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.162] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.176] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.192] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.204] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.216] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.228] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.242] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.255] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.268] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.281] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.295] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.308] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.321] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.335] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.348] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.361] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.375] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.388] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.401] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.415] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.428] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.441] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.455] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.468] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.482] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.495] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.509] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.524] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.538] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.551] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.564] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.577] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.591] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.604] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.617] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.632] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.642] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.657] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.670] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.686] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.697] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.710] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.723] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.737] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.750] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.763] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.777] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.789] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.802] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.815] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.829] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.843] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.855] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.869] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.885] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.898] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.910] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.923] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.938] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.951] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.964] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.977] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:39.991] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.003] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.017] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.032] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.044] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.058] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.071] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.085] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.097] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.110] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.123] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.136] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.150] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.163] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.176] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.190] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.203] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.216] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.230] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.243] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.256] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.270] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.283] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.296] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.323] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.336] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.340] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.349] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.363] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.376] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.390] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.405] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.418] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.432] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.445] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.457] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.471] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.485] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.497] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.510] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.525] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.538] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.549] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.563] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.578] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.592] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.605] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.616] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.629] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.643] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.656] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.670] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.684] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.698] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.712] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.725] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.739] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.752] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.766] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.779] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.792] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.806] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.819] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.833] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.845] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.859] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.872] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.885] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.898] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.912] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.925] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.939] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.952] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.965] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.979] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:40.990] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.005] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.019] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.032] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.045] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.059] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.072] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.086] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.102] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.111] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.124] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.143] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.166] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.178] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.194] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.204] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.217] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.231] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.244] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.257] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.275] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.283] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.291] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.300] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.309] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.318] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.326] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.339] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.353] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.364] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.380] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.391] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.405] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.418] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.434] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.446] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.459] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.473] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.491] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.499] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.512] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.524] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.542] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.553] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.565] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.585] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.593] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.606] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.619] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.639] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.647] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.659] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.673] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.688] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.698] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.711] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.724] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.740] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.764] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.766] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.790] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.793] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.804] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.832] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.839] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.848] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.859] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.873] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.891] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.899] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.911] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.925] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.938] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.952] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.964] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:41.977] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:43.339] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:43.342] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:43.352] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:43.366] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:43.380] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:43.392] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:43.406] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:43.420] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:43.440] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:43.448] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:43.465] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:43.474] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:43.491] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:43.500] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:43.515] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:43.526] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:43.546] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:43.555] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:43.567] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.168] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.189] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.195] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.208] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.221] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.238] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.249] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.262] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.277] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.296] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.302] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.315] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.334] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.342] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.354] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.369] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.384] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.397] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.406] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.433] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.439] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.448] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.460] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.474] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.493] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.501] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.515] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:53:45.529] [Render thread/INFO] [item-placer/]: DWD
+[16Aug2024 16:54:03.546] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
+[16Aug2024 16:54:03.552] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[16Aug2024 16:54:03.566] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[16Aug2024 16:54:03.567] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[16Aug2024 16:54:04.051] [Server thread/INFO] [net.minecraft.server.network.ServerPlayNetworkHandler/]: Dev lost connection: Disconnected
+[16Aug2024 16:54:04.052] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[16Aug2024 16:54:04.054] [Server thread/INFO] [net.minecraft.server.network.ServerPlayNetworkHandler/]: Stopping singleplayer server as player logged out
+[16Aug2024 16:54:04.096] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[16Aug2024 16:54:04.097] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[16Aug2024 16:54:04.097] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[16Aug2024 16:54:04.294] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[16Aug2024 16:54:04.689] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[16Aug2024 16:54:04.690] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[16Aug2024 16:54:04.709] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (New World): All chunks are saved
+[16Aug2024 16:54:04.709] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[16Aug2024 16:54:04.709] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[16Aug2024 16:54:04.709] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[16Aug2024 16:54:05.966] [Render thread/INFO] [net.minecraft.client.MinecraftClient/]: Stopping!

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "item-placer",
+  "version": "${version}",
+  "name": "Item placer",
+  "description": "Place any item on any block side",
+  "authors": [
+    "akicater"
+  ],
+  "contact": {
+    "discord": "https://fabricmc.net/",
+    "github": "https://github.com/kiber-pacan/item-placer"
+  },
+  "license": "MIT",
+  "icon": "assets/item-placer/logo.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.akicater.fabric.ItemPlacerFabric"
+    ],
+    "client": [
+      "com.akicater.fabric.client.ItemPlacerFabricClient"
+    ],
+    "modmenu": [
+      "com.akicater.fabric.client.ModMenuApiImpl"
+    ]
+  },
+  "mixins": [
+    "itemplacer.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.1",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "architectury": ">=9.2.14",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
