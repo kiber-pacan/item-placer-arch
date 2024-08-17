@@ -24,14 +24,13 @@ public class ScrollMixin {
 
 	@Inject(at = @At(value = "INVOKE", target = "Lnet/minecraft/client/option/GameOptions;getDiscreteMouseScroll()Lnet/minecraft/client/option/SimpleOption;"), method = "onMouseScroll")
 	private void disableScrolling(long window, double horizontal, double vertical, CallbackInfo callbackInfo) {
-		if (STOP_SCROLLING_KEY != null && STOP_SCROLLING_KEY.isPressed()) {
+		if (STOP_SCROLLING_KEY.isPressed()) {
 			int x = (int) Math.signum(vertical);
-			BlockHitResult hitResult = (BlockHitResult) MinecraftClient.getInstance().crosshairTarget;
-			if (hitResult != null) {
+			if (MinecraftClient.getInstance().crosshairTarget instanceof BlockHitResult) {
 				PacketByteBuf buf = new PacketByteBuf(Unpooled.buffer());
-				buf.writeBlockPos(hitResult.getBlockPos());
+				buf.writeBlockPos(((BlockHitResult) MinecraftClient.getInstance().crosshairTarget).getBlockPos());
 				buf.writeFloat(3.6f * x + random.nextFloat(0.1f, 1f));
-				buf.writeBlockHitResult(hitResult);
+				buf.writeBlockHitResult((BlockHitResult) MinecraftClient.getInstance().crosshairTarget);
 				NetworkManager.sendToServer(ITEMROTATE, buf);
 			}
 		}
