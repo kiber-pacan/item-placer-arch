@@ -81,8 +81,6 @@ public class layingItemBER implements BlockEntityRenderer<layingItemBlockEntity>
 
                 matrices.translate(entity.positions.get(i).x, entity.positions.get(i).y, entity.positions.get(i).z);
 
-                ItemPlacerCommon.LOGGER.info("DWD");
-
                 // Differentiate item and block rendering
                 if(item.getItem() instanceof BlockItem) {
                     // Differentiate new and old block rendering
