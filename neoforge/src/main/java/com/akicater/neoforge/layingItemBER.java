@@ -1,6 +1,5 @@
-package com.akicater.forge;
+package com.akicater.neoforge;
 
-import com.akicater.ItemPlacerCommon;
 import com.akicater.blocks.layingItemBlockEntity;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.minecraft.client.MinecraftClient;
