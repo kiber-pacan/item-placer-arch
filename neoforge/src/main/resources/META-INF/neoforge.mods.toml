@@ -1,7 +1,7 @@
 modLoader = "javafml"
-loaderVersion = "[47,)"
+loaderVersion = "[4,)"
 #issueTrackerURL = ""
-license = "Insert License Here"
+license = "MIT"
 
 [[mods]]
 modId = "itemplacer"
@@ -14,22 +14,25 @@ Place any item on any block side
 logoFile = "assets/item-placer/logo.png"
 
 [[dependencies.itemplacer]]
-modId = "forge"
-mandatory = true
-versionRange = "[47,)"
+modId = "neoforge"
+type = "required"
+versionRange = "[21.0,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.itemplacer]]
 modId = "minecraft"
-mandatory = true
+type = "required"
 versionRange = "[1.21,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.itemplacer]]
 modId = "architectury"
-mandatory = true
-versionRange = "[9.2.14,)"
+type = "required"
+versionRange = "[13.0.2,)"
 ordering = "AFTER"
 side = "BOTH"
+
+[[mixins]]
+config = "itemplacer.mixins.json"
