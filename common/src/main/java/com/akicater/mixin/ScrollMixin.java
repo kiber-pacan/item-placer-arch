@@ -29,7 +29,7 @@ public class ScrollMixin {
 			if (MinecraftClient.getInstance().crosshairTarget instanceof BlockHitResult) {
 				PacketByteBuf buf = new PacketByteBuf(Unpooled.buffer());
 				buf.writeBlockPos(((BlockHitResult) MinecraftClient.getInstance().crosshairTarget).getBlockPos());
-				buf.writeFloat(3.6f * x + random.nextFloat(0.1f, 1f));
+				buf.writeFloat(x * random.nextFloat(1.0f, 3.0f));
 				buf.writeBlockHitResult((BlockHitResult) MinecraftClient.getInstance().crosshairTarget);
 				NetworkManager.sendToServer(ITEMROTATE, buf);
 			}
