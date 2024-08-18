@@ -1,5 +1,6 @@
 package com.akicater.mixin;
 
+import com.akicater.network.ItemRotatePayload;
 import dev.architectury.networking.NetworkManager;
 import io.netty.buffer.Unpooled;
 import net.minecraft.client.MinecraftClient;
@@ -26,12 +27,10 @@ public class ScrollMixin {
 	private void disableScrolling(long window, double horizontal, double vertical, CallbackInfo callbackInfo) {
 		if (STOP_SCROLLING_KEY.isPressed()) {
 			int x = (int) Math.signum(vertical);
-			if (MinecraftClient.getInstance().crosshairTarget instanceof BlockHitResult) {
-				PacketByteBuf buf = new PacketByteBuf(Unpooled.buffer());
-				buf.writeBlockPos(((BlockHitResult) MinecraftClient.getInstance().crosshairTarget).getBlockPos());
-				buf.writeFloat(3.6f * x + random.nextFloat(0.1f, 1f));
-				buf.writeBlockHitResult((BlockHitResult) MinecraftClient.getInstance().crosshairTarget);
-				NetworkManager.sendToServer(ITEMROTATE, buf);
+			if (MinecraftClient.getInstance().crosshairTarget instanceof BlockHitResult hitResult) {
+                float degrees = x * random.nextFloat(1.0f, 3.0f);
+				ItemRotatePayload payload = new ItemRotatePayload(hitResult.getBlockPos(), degrees, hitResult);
+				NetworkManager.sendToServer(payload);
 			}
 		}
 	}

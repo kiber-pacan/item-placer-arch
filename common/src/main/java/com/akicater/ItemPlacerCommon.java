@@ -2,6 +2,8 @@ package com.akicater;
 
 import com.akicater.blocks.layingItem;
 import com.akicater.blocks.layingItemBlockEntity;
+import com.akicater.network.ItemPlacePayload;
+import com.akicater.network.ItemRotatePayload;
 import com.google.common.base.Suppliers;
 import dev.architectury.event.events.client.ClientTickEvent;
 import dev.architectury.networking.NetworkManager;
@@ -58,73 +60,29 @@ public class ItemPlacerCommon {
 	public static KeyBinding STOP_SCROLLING_KEY;
 
 	public static void initializeServer() {
-		if (Platform.isForge()) MODID = "itemplacer";
+		if (Platform.isForgeLike()) MODID = "itemplacer";
 
 		MANAGER = Suppliers.memoize(() -> RegistrarManager.get(MODID));
 		Registrar<Block> blocks = MANAGER.get().get(Registries.BLOCK);
 		Registrar<BlockEntityType<?>> blockEntityTypes = MANAGER.get().get(Registries.BLOCK_ENTITY_TYPE);
 
-		LAYING_ITEM = blocks.register(new Identifier(MODID, "laying_item"), () -> new layingItem(Block.Settings.create().breakInstantly().nonOpaque().noBlockBreakParticles().pistonBehavior(PistonBehavior.DESTROY)));
+		LAYING_ITEM = blocks.register(Identifier.of(MODID, "laying_item"), () -> new layingItem(Block.Settings.create().breakInstantly().nonOpaque().noBlockBreakParticles().pistonBehavior(PistonBehavior.DESTROY)));
 		LAYING_ITEM_BLOCK_ENTITY = blockEntityTypes.register(
-				new Identifier(MODID, "laying_item_block_entity"),
+				Identifier.of(MODID, "laying_item_block_entity"),
 				() -> BlockEntityType.Builder.create(layingItemBlockEntity::new, LAYING_ITEM.get()).build(null)
 		);
 
-		ITEMPLACE = new Identifier(MODID, "itemplace");
-		ITEMROTATE = new Identifier(MODID, "itemrotate");
+		NetworkManager.registerReceiver(NetworkManager.Side.C2S, ItemPlacePayload.ID, ItemPlacePayload.CODEC, (buf, context) -> ItemPlacePayload.receive(context.getPlayer(), buf.pos(), buf.hitResult()));
 
-		NetworkManager.registerReceiver(NetworkManager.Side.C2S, ITEMPLACE, (buf, context) -> {
-			ItemStack stack = context.getPlayer().getMainHandStack();
-			World world = context.getPlayer().getWorld();
-			BlockPos pos = buf.readBlockPos();
-			BlockHitResult hitResult = buf.readBlockHitResult();
-			if (world.getBlockState(pos).getBlock() == Blocks.AIR || world.getBlockState(pos).getBlock() == Blocks.WATER) {
-				context.getPlayer().setStackInHand(Hand.MAIN_HAND, ItemStack.EMPTY);
-				Direction dir = hitResult.getSide().getOpposite();
-				BlockState state = ItemPlacerCommon.LAYING_ITEM.get().getDefaultState();
-				if (world.getBlockState(pos).getBlock() == Blocks.WATER) {
-					state = state.with(Properties.WATERLOGGED, true);
-				}
-				world.setBlockState(pos, state);
-				state.initShapeCache();
-				layingItemBlockEntity blockEntity = (layingItemBlockEntity)world.getChunk(pos).getBlockEntity(pos);
-				if (blockEntity != null) {
-					int i = ItemPlacerCommon.dirToInt(dir);
-					blockEntity.inventory.set(i, stack);
-					world.emitGameEvent(context.getPlayer(), GameEvent.BLOCK_CHANGE, pos);
-					blockEntity.markDirty();
-				}
-			} else if (world.getBlockState(pos).getBlock() == ItemPlacerCommon.LAYING_ITEM.get()) {
-				Direction dir = hitResult.getSide().getOpposite();
-				layingItemBlockEntity blockEntity = (layingItemBlockEntity)world.getChunk(pos).getBlockEntity(pos);
-				if (blockEntity != null) {
-					int i = ItemPlacerCommon.dirToInt(dir);
-					if(blockEntity.inventory.get(i).isEmpty()) {
-						context.getPlayer().setStackInHand(Hand.MAIN_HAND, ItemStack.EMPTY);
-						blockEntity.inventory.set(i, stack);
-						world.emitGameEvent(context.getPlayer(), GameEvent.BLOCK_CHANGE, pos);
-						blockEntity.markDirty();
-					}
-				}
-			}
-		});
-
-		NetworkManager.registerReceiver(NetworkManager.Side.C2S, ITEMROTATE, (buf, context) -> {
-			BlockPos pos = buf.readBlockPos();
-			World world = context.getPlayer().getEntityWorld();
-			BlockEntity blockEntity = world.getChunk(pos).getBlockEntity(pos);
-			if (blockEntity instanceof layingItemBlockEntity) {
-				((layingItemBlockEntity) blockEntity).rotate(buf.readFloat(), getDirection(buf.readBlockHitResult()));
-			}
-		});
+		NetworkManager.registerReceiver(NetworkManager.Side.C2S, ItemRotatePayload.ID, ItemRotatePayload.CODEC, (buf, context) -> ItemRotatePayload.receive(context.getPlayer(), buf.pos(), buf.degrees(), buf.hitResult()));
 
 	}
 
 	public static void initializeClient() {
-		if (Platform.isForge()) {
+		if (Platform.isForgeLike()) {
 			MODID = "itemplacer";
 
-			NetworkManager.registerReceiver(NetworkManager.Side.C2S, ITEMPLACE, (buf, context) -> {
+			/*NetworkManager.registerReceiver(NetworkManager.Side.C2S, ITEMPLACE, (buf, context) -> {
 				ItemStack stack = context.getPlayer().getMainHandStack();
 				World world = context.getPlayer().getWorld();
 				BlockPos pos = buf.readBlockPos();
@@ -158,20 +116,20 @@ public class ItemPlacerCommon {
 						}
 					}
 				}
-			});
+			});*/
 
-			NetworkManager.registerReceiver(NetworkManager.Side.C2S, ITEMROTATE, (buf, context) -> {
+			/*NetworkManager.registerReceiver(NetworkManager.Side.C2S, ITEMROTATE, (buf, context) -> {
 				BlockPos pos = buf.readBlockPos();
 				World world = context.getPlayer().getEntityWorld();
 				BlockEntity blockEntity = world.getChunk(pos).getBlockEntity(pos);
 				if (blockEntity instanceof layingItemBlockEntity) {
 					((layingItemBlockEntity) blockEntity).rotate(buf.readFloat(), getDirection(buf.readBlockHitResult()));
 				}
-			});
+			});*/
 		}
 
-		ITEMPLACE = new Identifier(MODID, "itemplace");
-		ITEMROTATE = new Identifier(MODID, "itemrotate");
+		ITEMPLACE = Identifier.of(MODID, "itemplace");
+		ITEMROTATE = Identifier.of(MODID, "itemrotate");
 
 		PLACE_KEY = new KeyBinding(
 				"Place item",
@@ -190,12 +148,11 @@ public class ItemPlacerCommon {
 		ClientTickEvent.CLIENT_POST.register(client -> {
 			if (PLACE_KEY.wasPressed()) {
 				if (client.crosshairTarget instanceof BlockHitResult && client.player.getStackInHand(Hand.MAIN_HAND) != ItemStack.EMPTY && MinecraftClient.getInstance().world.getBlockState(((BlockHitResult) client.crosshairTarget).getBlockPos()).getBlock() != Blocks.AIR) {
-					PacketByteBuf buf = new PacketByteBuf(Unpooled.buffer());
-					Direction side = ((BlockHitResult) client.crosshairTarget).getSide();
-					BlockPos pos = ((BlockHitResult) client.crosshairTarget).getBlockPos();
-					buf.writeBlockPos(pos.offset(side, 1));
-					buf.writeBlockHitResult((BlockHitResult) client.crosshairTarget);
-					NetworkManager.sendToServer(ITEMPLACE, buf);
+					BlockHitResult hitResult = (BlockHitResult) client.crosshairTarget;
+					Direction side = hitResult.getSide();
+					BlockPos pos = hitResult.getBlockPos();
+					ItemPlacePayload payload = new ItemPlacePayload(pos.offset(side, 1), (BlockHitResult) client.crosshairTarget);
+					NetworkManager.sendToServer(payload);
 				}
 			}
 		});
