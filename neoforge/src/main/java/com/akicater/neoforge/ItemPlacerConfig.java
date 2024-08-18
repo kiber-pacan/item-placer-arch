@@ -1,9 +1,7 @@
-package com.akicater.forge;
+package com.akicater.neoforge;
 
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
-
-import static com.akicater.ItemPlacerCommon.MODID;
 
 @Config(name = "itemplacer")
 public class ItemPlacerConfig implements ConfigData {
