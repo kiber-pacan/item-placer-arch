@@ -81,51 +81,6 @@ public class ItemPlacerCommon {
 	public static void initializeClient() {
 		if (Platform.isForgeLike()) {
 			MODID = "itemplacer";
-
-			/*NetworkManager.registerReceiver(NetworkManager.Side.C2S, ITEMPLACE, (buf, context) -> {
-				ItemStack stack = context.getPlayer().getMainHandStack();
-				World world = context.getPlayer().getWorld();
-				BlockPos pos = buf.readBlockPos();
-				BlockHitResult hitResult = buf.readBlockHitResult();
-				if (world.getBlockState(pos).getBlock() == Blocks.AIR || world.getBlockState(pos).getBlock() == Blocks.WATER) {
-					context.getPlayer().setStackInHand(Hand.MAIN_HAND, ItemStack.EMPTY);
-					Direction dir = hitResult.getSide().getOpposite();
-					BlockState state = ItemPlacerCommon.LAYING_ITEM.get().getDefaultState();
-					if (world.getBlockState(pos).getBlock() == Blocks.WATER) {
-						state = state.with(Properties.WATERLOGGED, true);
-					}
-					world.setBlockState(pos, state);
-					state.initShapeCache();
-					layingItemBlockEntity blockEntity = (layingItemBlockEntity)world.getChunk(pos).getBlockEntity(pos);
-					if (blockEntity != null) {
-						int i = ItemPlacerCommon.dirToInt(dir);
-						blockEntity.inventory.set(i, stack);
-						world.emitGameEvent(context.getPlayer(), GameEvent.BLOCK_CHANGE, pos);
-						blockEntity.markDirty();
-					}
-				} else if (world.getBlockState(pos).getBlock() == ItemPlacerCommon.LAYING_ITEM.get()) {
-					Direction dir = hitResult.getSide().getOpposite();
-					layingItemBlockEntity blockEntity = (layingItemBlockEntity)world.getChunk(pos).getBlockEntity(pos);
-					if (blockEntity != null) {
-						int i = ItemPlacerCommon.dirToInt(dir);
-						if(blockEntity.inventory.get(i).isEmpty()) {
-							context.getPlayer().setStackInHand(Hand.MAIN_HAND, ItemStack.EMPTY);
-							blockEntity.inventory.set(i, stack);
-							world.emitGameEvent(context.getPlayer(), GameEvent.BLOCK_CHANGE, pos);
-							blockEntity.markDirty();
-						}
-					}
-				}
-			});*/
-
-			/*NetworkManager.registerReceiver(NetworkManager.Side.C2S, ITEMROTATE, (buf, context) -> {
-				BlockPos pos = buf.readBlockPos();
-				World world = context.getPlayer().getEntityWorld();
-				BlockEntity blockEntity = world.getChunk(pos).getBlockEntity(pos);
-				if (blockEntity instanceof layingItemBlockEntity) {
-					((layingItemBlockEntity) blockEntity).rotate(buf.readFloat(), getDirection(buf.readBlockHitResult()));
-				}
-			});*/
 		}
 
 		ITEMPLACE = Identifier.of(MODID, "itemplace");
@@ -144,6 +99,9 @@ public class ItemPlacerCommon {
 				GLFW.GLFW_KEY_LEFT_ALT,
 				"item-placer"
 		);
+
+		KeyMappingRegistry.register(PLACE_KEY);
+		KeyMappingRegistry.register(STOP_SCROLLING_KEY);
 
 		ClientTickEvent.CLIENT_POST.register(client -> {
 			if (PLACE_KEY.wasPressed()) {
