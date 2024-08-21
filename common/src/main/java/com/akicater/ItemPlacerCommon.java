@@ -187,6 +187,9 @@ public class ItemPlacerCommon {
 				"item-placer"
 		);
 
+		KeyMappingRegistry.register(PLACE_KEY);
+		KeyMappingRegistry.register(STOP_SCROLLING_KEY);
+
 		ClientTickEvent.CLIENT_POST.register(client -> {
 			if (PLACE_KEY.wasPressed()) {
 				if (client.crosshairTarget instanceof BlockHitResult && client.player.getStackInHand(Hand.MAIN_HAND) != ItemStack.EMPTY && MinecraftClient.getInstance().world.getBlockState(((BlockHitResult) client.crosshairTarget).getBlockPos()).getBlock() != Blocks.AIR) {
