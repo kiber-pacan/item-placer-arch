@@ -9,9 +9,6 @@ import net.minecraft.inventory.Inventories;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtOps;
-import net.minecraft.network.listener.ClientPlayPacketListener;
-import net.minecraft.network.packet.Packet;
-import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.collection.DefaultedList;
@@ -20,6 +17,17 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
+
+#if MC_VER >= V1_19_4
+import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
+import net.minecraft.network.packet.Packet;
+import net.minecraft.network.listener.ClientPlayPacketListener;
+#else
+    import net.minecraft.network.Packet;
+    import net.minecraft.network.listener.ClientPlayPacketListener;
+    import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
+#endif
 
 import java.util.ArrayList;
 import java.util.List;
@@ -85,29 +93,59 @@ public class layingItemBlockEntity extends BlockEntity {
     }
 
     @Override
-    public NbtCompound toInitialChunkDataNbt() {
-        return createNbt();
+    public NbtCompound toInitialChunkDataNbt(#if MC_VER >= V1_21 RegistryWrapper.WrapperLookup registryLookup #endif ) {
+        return createNbt(
+            #if MC_VER >= V1_21
+                registryLookup
+            #endif
+        );
     }
 
     @Override
-    public void readNbt(NbtCompound nbt) {
-        super.readNbt(nbt);
+    public void readNbt(
+            NbtCompound nbt
+            #if MC_VER >= V1_21
+            , RegistryWrapper.WrapperLookup registryLookup
+            #endif
+    ) {
+        super.readNbt(
+                nbt
+                #if MC_VER >= V1_21
+                , registryLookup
+                #endif
+        );
         inventory.clear();
-        Inventories.readNbt(nbt, inventory);
-        if (nbt.contains("rotation")) {
-            RotationCodec.CODEC.parse(NbtOps.INSTANCE, nbt.getCompound("rotation")).resultOrPartial(LOGGER::error).ifPresent(quat -> {
-                this.rotation = quat;
-            });
-        }
+        Inventories.readNbt(
+                nbt,
+                inventory
+                #if MC_VER >= V1_21
+                , registryLookup
+                #endif
+        );
         markDirty();
     }
 
+
+
     @Override
-    public void writeNbt(NbtCompound nbt) {
-        super.writeNbt(nbt);
-        Inventories.writeNbt(nbt, inventory);
-        RotationCodec.CODEC.encodeStart(NbtOps.INSTANCE, this.rotation).resultOrPartial(LOGGER::error).ifPresent(
-                rotation -> nbt.put("rotation", rotation)
+    public void writeNbt(
+            NbtCompound nbt
+            #if MC_VER >= V1_21
+            , RegistryWrapper.WrapperLookup registryLookup
+            #endif
+    ) {
+        super.writeNbt(
+                nbt
+                #if MC_VER >= V1_21
+                , registryLookup
+                #endif
+        );
+        Inventories.writeNbt(
+                nbt,
+                inventory
+                #if MC_VER >= V1_21
+                , registryLookup
+                #endif
         );
     }
 

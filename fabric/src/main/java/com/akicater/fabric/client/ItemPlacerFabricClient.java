@@ -12,6 +12,6 @@ public final class ItemPlacerFabricClient implements ClientModInitializer {
         ItemPlacerCommon.initializeClient();
 
         AutoConfig.register(ItemPlacerConfig.class, Toml4jConfigSerializer::new);
-        BlockEntityRendererFactories.register(ItemPlacerCommon.LAYING_ITEM_BLOCK_ENTITY.get(), layingItemBER::new);
+        BlockEntityRendererFactories.register(ItemPlacerCommon.LAYING_ITEM_BLOCK_ENTITY.get(), layingItemBER_Fabric::new);
     }
 }

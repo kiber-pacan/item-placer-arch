@@ -1,7 +1,6 @@
-package com.akicater.fabric.client;
+package com.akicater.ber;
 
 import com.akicater.blocks.layingItemBlockEntity;
-import me.shedaniel.autoconfig.AutoConfig;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.LightmapTextureManager;
 import net.minecraft.client.render.VertexConsumerProvider;
@@ -22,10 +21,7 @@ import org.joml.Quaternionf;
 import java.util.ArrayList;
 import java.util.List;
 
-public class layingItemBER implements BlockEntityRenderer<layingItemBlockEntity> {
-
-    ItemPlacerConfig config = AutoConfig.getConfigHolder(ItemPlacerConfig.class).getConfig();
-
+public abstract class layingItemBER implements BlockEntityRenderer<layingItemBlockEntity> {
     public static List<Quaternionf> list = new ArrayList<>(
             List.of(
                     RotationAxis.POSITIVE_X.rotationDegrees(0),   //SOUTH
@@ -61,14 +57,8 @@ public class layingItemBER implements BlockEntityRenderer<layingItemBlockEntity>
                 dest.w * cos - dest.x * sin);
     }
 
-    @Override
-    public void render(layingItemBlockEntity entity, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay) {
+    public void render(layingItemBlockEntity entity, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay, float absoluteSize, float blockSize, float itemSize, boolean oldRendering) {
         ItemRenderer itemRenderer = MinecraftClient.getInstance().getItemRenderer();
-        float absoluteSize = config.absoluteSize;
-        boolean oldRendering = config.oldRendering;
-
-        float itemSize = config.tempItemSize * absoluteSize;
-        float blockSize = config.tempBlockSize * absoluteSize;
 
         int x = getLight(entity.getWorld(), entity.getPos());
 

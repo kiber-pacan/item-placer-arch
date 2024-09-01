@@ -1,7 +1,17 @@
 plugins {
-    id 'dev.architectury.loom' version '1.6-SNAPSHOT' apply false
+    id 'dev.architectury.loom' version '1.7-SNAPSHOT' apply false
     id 'architectury-plugin' version '3.4-SNAPSHOT'
+
     id 'com.github.johnrengelman.shadow' version '8.1.1' apply false
+    id 'systems.manifold.manifold-gradle-plugin' version '0.0.2-alpha'
+
+    id 'com.matthewprenger.cursegradle' version '1.4.0' apply false
+    id 'com.modrinth.minotaur' version '2.+' apply false
+}
+
+project.gradle.ext.getProperties().each { prop ->
+    //if (prop.key != null && prop.value != null)
+    rootProject.ext.set(prop.key, prop.value)
 }
 
 architectury {
@@ -17,54 +27,97 @@ subprojects {
     apply plugin: 'dev.architectury.loom'
     apply plugin: 'architectury-plugin'
     apply plugin: 'maven-publish'
+    apply plugin: "systems.manifold.manifold-gradle-plugin"
+    apply plugin: "com.modrinth.minotaur"
+    apply plugin: "com.matthewprenger.cursegradle"
 
     base {
-        // Set up a suffixed format for the mod jar names, e.g. `example-fabric`.
-        archivesName = "$rootProject.archives_name-$project.name"
+        archivesName = "$rootProject.archives_name-mc$project.minecraft_version-$project.name"
     }
 
     repositories {
-        // Add repositories to retrieve artifacts from in here.
-        // You should only use this when depending on other mods because
-        // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-        // See https://docs.gradle.org/current/userguide/declaring_repositories.html
-        // for more information about repositories.
+        mavenLocal()
+        mavenCentral()
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+    }
+
+    configurations {
+        testImplementation.extendsFrom annotationProcessor
+    }
+
+    processResources {
+        def replaceProperties = [
+                version : project.mod_version,
+                minecraft_version : project.minecraft_version,
+                java : "17",
+                name : "Item placer",
+                description : "Simple mod that adds shelves to minecraft",
+                architectury_api_version : project.architectury_api_version
+        ]
+
+        def files = ["fabric.mod.json", "META-INF/mods.toml", "META-INF/neoforge.mods.toml", "quilt.mod.json"]
+        inputs.properties replaceProperties
+
+        filesMatching(files) {
+            replaceProperties.eachWithIndex {
+                expand(replaceProperties) {
+                    replaceProperties
+                }
+            }
+        }
     }
 
     dependencies {
+        annotationProcessor("systems.manifold:manifold-preprocessor:${manifold_version}")
         minecraft "net.minecraft:minecraft:$rootProject.minecraft_version"
-        mappings "net.fabricmc:yarn:$rootProject.yarn_mappings:v2"
+        if (rootProject.hasProperty("yarn_mappings_patch_neoforge_version")) {
+            mappings loom.layered {
+                it.mappings("net.fabricmc:yarn:$rootProject.yarn_mappings:v2")
+                it.mappings("dev.architectury:yarn-mappings-patch-neoforge:$rootProject.yarn_mappings_patch_neoforge_version")
+            }
+        } else {
+            mappings "net.fabricmc:yarn:$rootProject.yarn_mappings:v2"
+        }
     }
 
     java {
-        // Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
-        // if it is present.
-        // If you remove this line, sources will not be generated.
         withSourcesJar()
-
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = sourceCompatibility = rootProject.java as Integer
     }
 
     tasks.withType(JavaCompile).configureEach {
-        it.options.release = 17
+        it.options.release = rootProject.java as Integer
     }
 
-    // Configure Maven publishing.
-    publishing {
-        publications {
-            mavenJava(MavenPublication) {
-                artifactId = base.archivesName.get()
-                from components.java
+    def loader = project.name
+    print(loader)
+    apply plugin: "com.modrinth.minotaur"
+
+
+    modrinth {
+        token = "token"
+        projectId = "shelf-mod"
+        versionName = archives_name + " " + mod_version
+        versionNumber = mod_version
+        versionType = "release"
+        uploadFile = remapJar
+        gameVersions = [rootProject.minecraft_version]
+        loaders = [loader]
+        dependencies {
+            if (loader.equals("fabric")) {
+                required.project "cloth-config"
+                required.project "fabric-api"
+                required.project "modmenu"
+                required.project "architectury-api"
+            } else if (loader.equals("forge") || loader.equals("neoforge")) {
+                required.project "cloth-config"
+                required.project "architectury-api"
             }
         }
+        failSilently = true
+    }
 
-        // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
-        repositories {
-            // Add repositories to publish to here.
-            // Notice: This block does NOT have the same function as the block in the top level.
-            // The repositories here will be used for publishing your artifact, not for
-            // retrieving dependencies.
-        }
+    publishing {
+
     }
 }

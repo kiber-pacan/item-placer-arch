@@ -198,7 +198,11 @@ public class ItemPlacerCommon {
 					BlockPos pos = ((BlockHitResult) client.crosshairTarget).getBlockPos();
 					buf.writeBlockPos(pos.offset(side, 1));
 					buf.writeBlockHitResult((BlockHitResult) client.crosshairTarget);
-					NetworkManager.sendToServer(ITEMPLACE, buf);
+					#if MC_VER < V1_21
+						NetworkManager.sendToServer(ITEMPLACE, buf);
+					#else
+
+					#endif
 				}
 			}
 		});
