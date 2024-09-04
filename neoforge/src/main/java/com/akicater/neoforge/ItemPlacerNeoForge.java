@@ -1,8 +1,8 @@
 package com.akicater.neoforge;
 
-import com.akciater.ShelfModCommon;
 import com.akicater.ItemPlacerCommon;
 import com.akicater.neoforge.client.config.ClothConfigImpl;
+import com.akicater.neoforge.client.config.ItemPlacerConfigNeoForge;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
 import net.neoforged.fml.common.Mod;
@@ -15,7 +15,7 @@ public final class ItemPlacerNeoForge {
 
         if (FMLLoader.getDist() == net.neoforged.api.distmarker.Dist.CLIENT) {
             ItemPlacerCommon.initializeClient();
-            AutoConfig.register(ShelfModConfigNeoForge.class, Toml4jConfigSerializer::new);
+            AutoConfig.register(ItemPlacerConfigNeoForge.class, Toml4jConfigSerializer::new);
             ClothConfigImpl.registerModsPage();
         }
     }

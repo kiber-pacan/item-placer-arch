@@ -1,6 +1,10 @@
 package com.akicater.mixin;
 
+#if MC_VER >= V1_21
+import com.akicater.network.ItemRotatePayload;
+#endif
 import dev.architectury.networking.NetworkManager;
+import dev.architectury.platform.Platform;
 import io.netty.buffer.Unpooled;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.Mouse;
@@ -27,11 +31,20 @@ public class ScrollMixin {
 		if (STOP_SCROLLING_KEY.isPressed()) {
 			int x = (int) Math.signum(vertical);
 			if (MinecraftClient.getInstance().crosshairTarget instanceof BlockHitResult) {
-				PacketByteBuf buf = new PacketByteBuf(Unpooled.buffer());
-				buf.writeBlockPos(((BlockHitResult) MinecraftClient.getInstance().crosshairTarget).getBlockPos());
-				buf.writeFloat(x * random.nextFloat(1.0f, 3.0f));
-				buf.writeBlockHitResult((BlockHitResult) MinecraftClient.getInstance().crosshairTarget);
-				NetworkManager.sendToServer(ITEMROTATE, buf);
+				#if MC_VER < V1_21
+					PacketByteBuf buf = new PacketByteBuf(Unpooled.buffer());
+					buf.writeBlockPos(((BlockHitResult) MinecraftClient.getInstance().crosshairTarget).getBlockPos());
+					buf.writeFloat(x * random.nextFloat(1.0f, 3.0f));
+					buf.writeBlockHitResult((BlockHitResult) MinecraftClient.getInstance().crosshairTarget);
+					NetworkManager.sendToServer(ITEMROTATE, buf);
+				#else
+					ItemRotatePayload payload = new ItemRotatePayload(
+						((BlockHitResult) MinecraftClient.getInstance().crosshairTarget).getBlockPos(),
+						x * random.nextFloat(1.0f, 3.0f),
+						(BlockHitResult) MinecraftClient.getInstance().crosshairTarget
+					);
+					NetworkManager.sendToServer(payload);
+				#endif
 			}
 		}
 	}

@@ -1,16 +1,13 @@
 modLoader = "javafml"
 loaderVersion = "[47,)"
-#issueTrackerURL = ""
 license = "Insert License Here"
 
 [[mods]]
 modId = "itemplacer"
 version = "${version}"
-displayName = "Item placer"
+displayName = "${name}"
 authors = "akicater"
-description = '''
-Place any item on any block side
-'''
+description = "${description}"
 logoFile = "assets/item-placer/logo.png"
 
 [[dependencies.itemplacer]]

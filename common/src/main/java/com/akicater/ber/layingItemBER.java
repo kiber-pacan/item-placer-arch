@@ -64,14 +64,14 @@ public abstract class layingItemBER implements BlockEntityRenderer<layingItemBlo
 
         for (int i = 0; i < 6; i++) {
             if(!entity.inventory.get(i).isEmpty()) {
-                ItemStack item = entity.inventory.get(i);
+                ItemStack stack = entity.inventory.get(i);
 
                 matrices.push();
 
                 matrices.translate(entity.positions.get(i).x, entity.positions.get(i).y, entity.positions.get(i).z);
 
                 // Differentiate item and block rendering
-                if(item.getItem() instanceof BlockItem) {
+                if(MinecraftClient.getInstance().getItemRenderer().getModel(stack, entity.getWorld(), null, 1).hasDepth()) {
                     // Differentiate new and old block rendering
                     if (!oldRendering) {
                         matrices.multiply(rotateX(Math.toRadians(-90), rotateZ(Math.toRadians(entity.rotation.list.get(i)), list.get(i))));
@@ -85,7 +85,7 @@ public abstract class layingItemBER implements BlockEntityRenderer<layingItemBlo
                     matrices.multiply(rotateZ(Math.toRadians(entity.rotation.list.get(i)), list.get(i)));
                 }
 
-                itemRenderer.renderItem(item, ModelTransformationMode.FIXED, x, overlay, matrices,vertexConsumers, entity.getWorld(),1);
+                itemRenderer.renderItem(stack, ModelTransformationMode.FIXED, x, overlay, matrices,vertexConsumers, entity.getWorld(),1);
 
                 matrices.pop();
             }

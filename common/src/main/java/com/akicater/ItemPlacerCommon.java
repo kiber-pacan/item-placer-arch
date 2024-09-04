@@ -2,6 +2,10 @@ package com.akicater;
 
 import com.akicater.blocks.layingItem;
 import com.akicater.blocks.layingItemBlockEntity;
+#if MC_VER >= V1_21
+import com.akicater.network.ItemPlacePayload;
+import com.akicater.network.ItemRotatePayload;
+#endif
 import com.google.common.base.Suppliers;
 import dev.architectury.event.events.client.ClientTickEvent;
 import dev.architectury.networking.NetworkManager;
@@ -41,6 +45,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
+
+
 public class ItemPlacerCommon {
     public static final Logger LOGGER = LoggerFactory.getLogger("item-placer");
 	public static String MODID = "item-placer";
@@ -53,76 +59,35 @@ public class ItemPlacerCommon {
 	public static Identifier ITEMPLACE;
 	public static Identifier ITEMROTATE;
 
-
 	public static KeyBinding PLACE_KEY;
 	public static KeyBinding STOP_SCROLLING_KEY;
 
 	public static void initializeServer() {
-		if (Platform.isForge()) MODID = "itemplacer";
+		if (#if MC_VER < V1_20_4 new Platform.isForge() #else Platform.isForgeLike() #endif) MODID = "itemplacer";
 
 		MANAGER = Suppliers.memoize(() -> RegistrarManager.get(MODID));
 		Registrar<Block> blocks = MANAGER.get().get(Registries.BLOCK);
 		Registrar<BlockEntityType<?>> blockEntityTypes = MANAGER.get().get(Registries.BLOCK_ENTITY_TYPE);
 
-		LAYING_ITEM = blocks.register(new Identifier(MODID, "laying_item"), () -> new layingItem(Block.Settings.create().breakInstantly().nonOpaque().noBlockBreakParticles().pistonBehavior(PistonBehavior.DESTROY)));
+		LAYING_ITEM = blocks.register(#if MC_VER < V1_21 new Identifier #else Identifier.of #endif(MODID, "laying_item"), () -> new layingItem(Block.Settings.create().breakInstantly().nonOpaque().noBlockBreakParticles().pistonBehavior(PistonBehavior.DESTROY)));
 		LAYING_ITEM_BLOCK_ENTITY = blockEntityTypes.register(
-				new Identifier(MODID, "laying_item_block_entity"),
+				#if MC_VER < V1_21 new Identifier #else Identifier.of #endif(MODID, "laying_item_block_entity"),
 				() -> BlockEntityType.Builder.create(layingItemBlockEntity::new, LAYING_ITEM.get()).build(null)
 		);
 
-		ITEMPLACE = new Identifier(MODID, "itemplace");
-		ITEMROTATE = new Identifier(MODID, "itemrotate");
+		#if MC_VER >= V1_21
+		NetworkManager.registerReceiver(NetworkManager.Side.C2S, ItemPlacePayload.ID, ItemPlacePayload.CODEC, (buf, context) ->
+				ItemPlacePayload.receive(context.getPlayer(), buf.pos(), buf.hitResult())
+		);
 
-		NetworkManager.registerReceiver(NetworkManager.Side.C2S, ITEMPLACE, (buf, context) -> {
-			ItemStack stack = context.getPlayer().getMainHandStack();
-			World world = context.getPlayer().getWorld();
-			BlockPos pos = buf.readBlockPos();
-			BlockHitResult hitResult = buf.readBlockHitResult();
-			if (world.getBlockState(pos).getBlock() == Blocks.AIR || world.getBlockState(pos).getBlock() == Blocks.WATER) {
-				context.getPlayer().setStackInHand(Hand.MAIN_HAND, ItemStack.EMPTY);
-				Direction dir = hitResult.getSide().getOpposite();
-				BlockState state = ItemPlacerCommon.LAYING_ITEM.get().getDefaultState();
-				if (world.getBlockState(pos).getBlock() == Blocks.WATER) {
-					state = state.with(Properties.WATERLOGGED, true);
-				}
-				world.setBlockState(pos, state);
-				state.initShapeCache();
-				layingItemBlockEntity blockEntity = (layingItemBlockEntity)world.getChunk(pos).getBlockEntity(pos);
-				if (blockEntity != null) {
-					int i = ItemPlacerCommon.dirToInt(dir);
-					blockEntity.inventory.set(i, stack);
-					world.emitGameEvent(context.getPlayer(), GameEvent.BLOCK_CHANGE, pos);
-					blockEntity.markDirty();
-				}
-			} else if (world.getBlockState(pos).getBlock() == ItemPlacerCommon.LAYING_ITEM.get()) {
-				Direction dir = hitResult.getSide().getOpposite();
-				layingItemBlockEntity blockEntity = (layingItemBlockEntity)world.getChunk(pos).getBlockEntity(pos);
-				if (blockEntity != null) {
-					int i = ItemPlacerCommon.dirToInt(dir);
-					if(blockEntity.inventory.get(i).isEmpty()) {
-						context.getPlayer().setStackInHand(Hand.MAIN_HAND, ItemStack.EMPTY);
-						blockEntity.inventory.set(i, stack);
-						world.emitGameEvent(context.getPlayer(), GameEvent.BLOCK_CHANGE, pos);
-						blockEntity.markDirty();
-					}
-				}
-			}
-		});
+		NetworkManager.registerReceiver(NetworkManager.Side.C2S, ItemRotatePayload.ID, ItemRotatePayload.CODEC, (buf, context) ->
+				ItemRotatePayload.receive(context.getPlayer(), buf.pos(), buf.degrees(), buf.hitResult())
+		);
+		#endif
 
-		NetworkManager.registerReceiver(NetworkManager.Side.C2S, ITEMROTATE, (buf, context) -> {
-			BlockPos pos = buf.readBlockPos();
-			World world = context.getPlayer().getEntityWorld();
-			BlockEntity blockEntity = world.getChunk(pos).getBlockEntity(pos);
-			if (blockEntity instanceof layingItemBlockEntity) {
-				((layingItemBlockEntity) blockEntity).rotate(buf.readFloat(), getDirection(buf.readBlockHitResult()));
-			}
-		});
-
-	}
-
-	public static void initializeClient() {
-		if (Platform.isForge()) {
-			MODID = "itemplacer";
+		#if MC_VER < V1_21
+			ITEMPLACE = new Identifier(MODID, "itemplace");
+			ITEMROTATE = new Identifier(MODID, "itemrotate");
 
 			NetworkManager.registerReceiver(NetworkManager.Side.C2S, ITEMPLACE, (buf, context) -> {
 				ItemStack stack = context.getPlayer().getMainHandStack();
@@ -168,10 +133,70 @@ public class ItemPlacerCommon {
 					((layingItemBlockEntity) blockEntity).rotate(buf.readFloat(), getDirection(buf.readBlockHitResult()));
 				}
 			});
+			#else
+
+			#endif
+
+	}
+
+	public static void initializeClient() {
+		if (#if MC_VER < V1_20_4 new Platform.isForge() #else Platform.isForgeLike() #endif) {
+			MODID = "itemplacer";
+			#if MC_VER < V1_21
+				ITEMPLACE = new Identifier(MODID, "itemplace");
+				ITEMROTATE = new Identifier(MODID, "itemrotate");
+
+				NetworkManager.registerReceiver(NetworkManager.Side.C2S, ITEMPLACE, (buf, context) -> {
+					ItemStack stack = context.getPlayer().getMainHandStack();
+					World world = context.getPlayer().getWorld();
+					BlockPos pos = buf.readBlockPos();
+					BlockHitResult hitResult = buf.readBlockHitResult();
+					if (world.getBlockState(pos).getBlock() == Blocks.AIR || world.getBlockState(pos).getBlock() == Blocks.WATER) {
+						context.getPlayer().setStackInHand(Hand.MAIN_HAND, ItemStack.EMPTY);
+						Direction dir = hitResult.getSide().getOpposite();
+						BlockState state = ItemPlacerCommon.LAYING_ITEM.get().getDefaultState();
+						if (world.getBlockState(pos).getBlock() == Blocks.WATER) {
+							state = state.with(Properties.WATERLOGGED, true);
+						}
+						world.setBlockState(pos, state);
+						state.initShapeCache();
+						layingItemBlockEntity blockEntity = (layingItemBlockEntity)world.getChunk(pos).getBlockEntity(pos);
+						if (blockEntity != null) {
+							int i = ItemPlacerCommon.dirToInt(dir);
+							blockEntity.inventory.set(i, stack);
+							world.emitGameEvent(context.getPlayer(), GameEvent.BLOCK_CHANGE, pos);
+							blockEntity.markDirty();
+						}
+					} else if (world.getBlockState(pos).getBlock() == ItemPlacerCommon.LAYING_ITEM.get()) {
+						Direction dir = hitResult.getSide().getOpposite();
+						layingItemBlockEntity blockEntity = (layingItemBlockEntity)world.getChunk(pos).getBlockEntity(pos);
+						if (blockEntity != null) {
+							int i = ItemPlacerCommon.dirToInt(dir);
+							if(blockEntity.inventory.get(i).isEmpty()) {
+								context.getPlayer().setStackInHand(Hand.MAIN_HAND, ItemStack.EMPTY);
+								blockEntity.inventory.set(i, stack);
+								world.emitGameEvent(context.getPlayer(), GameEvent.BLOCK_CHANGE, pos);
+								blockEntity.markDirty();
+							}
+						}
+					}
+				});
+
+				NetworkManager.registerReceiver(NetworkManager.Side.C2S, ITEMROTATE, (buf, context) -> {
+					BlockPos pos = buf.readBlockPos();
+					World world = context.getPlayer().getEntityWorld();
+					BlockEntity blockEntity = world.getChunk(pos).getBlockEntity(pos);
+					if (blockEntity instanceof layingItemBlockEntity) {
+						((layingItemBlockEntity) blockEntity).rotate(buf.readFloat(), getDirection(buf.readBlockHitResult()));
+					}
+				});
+			#else
+
+			#endif
 		}
 
-		ITEMPLACE = new Identifier(MODID, "itemplace");
-		ITEMROTATE = new Identifier(MODID, "itemrotate");
+		ITEMPLACE = #if MC_VER < V1_21 new Identifier #else Identifier.of #endif(MODID, "itemplace");
+		ITEMROTATE = #if MC_VER < V1_21 new Identifier #else Identifier.of #endif(MODID, "itemrotate");
 
 		PLACE_KEY = new KeyBinding(
 				"Place item",
@@ -193,15 +218,19 @@ public class ItemPlacerCommon {
 		ClientTickEvent.CLIENT_POST.register(client -> {
 			if (PLACE_KEY.wasPressed()) {
 				if (client.crosshairTarget instanceof BlockHitResult && client.player.getStackInHand(Hand.MAIN_HAND) != ItemStack.EMPTY && MinecraftClient.getInstance().world.getBlockState(((BlockHitResult) client.crosshairTarget).getBlockPos()).getBlock() != Blocks.AIR) {
-					PacketByteBuf buf = new PacketByteBuf(Unpooled.buffer());
 					Direction side = ((BlockHitResult) client.crosshairTarget).getSide();
 					BlockPos pos = ((BlockHitResult) client.crosshairTarget).getBlockPos();
-					buf.writeBlockPos(pos.offset(side, 1));
-					buf.writeBlockHitResult((BlockHitResult) client.crosshairTarget);
 					#if MC_VER < V1_21
+						PacketByteBuf buf = new PacketByteBuf(Unpooled.buffer());
+						buf.writeBlockPos(pos.offset(side, 1));
+						buf.writeBlockHitResult((BlockHitResult) client.crosshairTarget);
 						NetworkManager.sendToServer(ITEMPLACE, buf);
 					#else
-
+						ItemPlacePayload payload = new ItemPlacePayload(
+								pos.offset(side, 1),
+								(BlockHitResult) client.crosshairTarget
+						);
+						NetworkManager.sendToServer(payload);
 					#endif
 				}
 			}

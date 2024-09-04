@@ -8,7 +8,7 @@ import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
 import net.minecraft.client.util.math.MatrixStack;
 
-public class layingItemBER_NeoForge extends layingItemBER {
+public class layingItemBER_Forge extends layingItemBER {
 
     ItemPlacerConfigNeoForge config = AutoConfig.getConfigHolder(ItemPlacerConfigNeoForge.class).getConfig();
 

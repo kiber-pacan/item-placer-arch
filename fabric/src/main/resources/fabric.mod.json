@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "item-placer",
   "version": "${version}",
-  "name": "Item placer",
+  "name": "${name}",
   "description": "Place any item on any block side",
   "authors": [
     "akicater"
