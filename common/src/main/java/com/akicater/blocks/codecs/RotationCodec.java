@@ -14,8 +14,6 @@ public class RotationCodec {
             ).apply(instance, RotationCodec::new)
     );
 
-    Random random = new Random();
-
     public List<Float> list;
 
     public RotationCodec(List<Float> list) {
@@ -23,6 +21,7 @@ public class RotationCodec {
     }
 
     public RotationCodec() {
+        Random random = new Random();
         list = new ArrayList<>(
                 List.of(
                         random.nextFloat(-360,360),     //SOUTH

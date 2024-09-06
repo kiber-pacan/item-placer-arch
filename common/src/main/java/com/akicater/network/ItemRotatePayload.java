@@ -26,9 +26,9 @@ public record ItemRotatePayload(BlockPos pos, float degrees, BlockHitResult hitR
     }
     public static void receive(PlayerEntity player, BlockPos pos, float degrees, BlockHitResult hitResult) {
         World world = player.getWorld();
-        BlockEntity blockEntity = world.getChunk(pos).getBlockEntity(pos);
-        if (blockEntity instanceof layingItemBlockEntity) {
-            ((layingItemBlockEntity) blockEntity).rotate(degrees, getDirection(hitResult));
+        layingItemBlockEntity blockEntity;
+        if ((blockEntity = (layingItemBlockEntity) world.getChunk(pos).getBlockEntity(pos)) != null) {
+            blockEntity.rotate(degrees, getDirection(hitResult));
         }
     }
 }

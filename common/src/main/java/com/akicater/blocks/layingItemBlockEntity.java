@@ -76,12 +76,12 @@ public class layingItemBlockEntity extends BlockEntity {
     }
     public void rotate(float degrees, int dir) {
         switch (dir){
-            case 0 -> rotation.list.set(0, rotation.list.get(0) + degrees);
-            case 1 -> rotation.list.set(1, rotation.list.get(1) -degrees);
-            case 2 -> rotation.list.set(2, rotation.list.get(2) + degrees);
-            case 3 -> rotation.list.set(3, rotation.list.get(3) -degrees);
-            case 4 -> rotation.list.set(4, rotation.list.get(4) + degrees);
-            case 5 -> rotation.list.set(5, rotation.list.get(5) -degrees);
+            case 0 -> rotation.list.add(0, degrees);
+            case 1 -> rotation.list.add(1, -degrees);
+            case 2 -> rotation.list.add(2, degrees);
+            case 3 -> rotation.list.add(3, -degrees);
+            case 4 -> rotation.list.add(4, degrees);
+            case 5 -> rotation.list.add(5, -degrees);
         }
         markDirty();
     }

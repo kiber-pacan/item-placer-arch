@@ -16,7 +16,7 @@ import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 #if MC_VER >= V1_21
     @EventBusSubscriber(modid = "itemplacer", bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 #else
-    @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @Mod.EventBusSubscriber(modid = "itemplacer", bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 #endif
 public class ItemPlacerEventHandler {
     @SubscribeEvent

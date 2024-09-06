@@ -18,8 +18,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.Random;
 
-import static com.akicater.ItemPlacerCommon.ITEMROTATE;
-import static com.akicater.ItemPlacerCommon.STOP_SCROLLING_KEY;
+import static com.akicater.ItemPlacerCommon.*;
 
 @Mixin(Mouse.class)
 public class ScrollMixin {

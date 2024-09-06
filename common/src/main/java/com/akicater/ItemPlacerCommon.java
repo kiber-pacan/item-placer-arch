@@ -56,8 +56,11 @@ public class ItemPlacerCommon {
 	public static RegistrySupplier<Block> LAYING_ITEM;
 	public static RegistrySupplier<BlockEntityType<layingItemBlockEntity>> LAYING_ITEM_BLOCK_ENTITY;
 
-	public static Identifier ITEMPLACE;
-	public static Identifier ITEMROTATE;
+	#if MC_VER < V1_21
+		public static Identifier ITEMPLACE;
+		public static Identifier ITEMROTATE;
+	#endif
+
 
 	public static KeyBinding PLACE_KEY;
 	public static KeyBinding STOP_SCROLLING_KEY;
@@ -85,10 +88,11 @@ public class ItemPlacerCommon {
 		);
 		#endif
 
-		#if MC_VER < V1_21
-			ITEMPLACE = new Identifier(MODID, "itemplace");
-			ITEMROTATE = new Identifier(MODID, "itemrotate");
 
+
+		#if MC_VER < V1_21
+			ITEMPLACE; = new Identifier(MODID, "itemplace");
+			ITEMROTATE; = new Identifier(MODID, "itemrotate");
 			NetworkManager.registerReceiver(NetworkManager.Side.C2S, ITEMPLACE, (buf, context) -> {
 				ItemStack stack = context.getPlayer().getMainHandStack();
 				World world = context.getPlayer().getWorld();
@@ -130,6 +134,7 @@ public class ItemPlacerCommon {
 				World world = context.getPlayer().getEntityWorld();
 				BlockEntity blockEntity = world.getChunk(pos).getBlockEntity(pos);
 				if (blockEntity instanceof layingItemBlockEntity) {
+					LOGGER.info("wewdq");
 					((layingItemBlockEntity) blockEntity).rotate(buf.readFloat(), getDirection(buf.readBlockHitResult()));
 				}
 			});
@@ -143,9 +148,8 @@ public class ItemPlacerCommon {
 		if (#if MC_VER < V1_20_4 new Platform.isForge() #else Platform.isForgeLike() #endif) {
 			MODID = "itemplacer";
 			#if MC_VER < V1_21
-				ITEMPLACE = new Identifier(MODID, "itemplace");
-				ITEMROTATE = new Identifier(MODID, "itemrotate");
-
+				ITEMPLACE; = new Identifier(MODID, "itemplace");
+				ITEMROTATE; = new Identifier(MODID, "itemrotate");
 				NetworkManager.registerReceiver(NetworkManager.Side.C2S, ITEMPLACE, (buf, context) -> {
 					ItemStack stack = context.getPlayer().getMainHandStack();
 					World world = context.getPlayer().getWorld();
@@ -194,9 +198,6 @@ public class ItemPlacerCommon {
 
 			#endif
 		}
-
-		ITEMPLACE = #if MC_VER < V1_21 new Identifier #else Identifier.of #endif(MODID, "itemplace");
-		ITEMROTATE = #if MC_VER < V1_21 new Identifier #else Identifier.of #endif(MODID, "itemrotate");
 
 		PLACE_KEY = new KeyBinding(
 				"Place item",
