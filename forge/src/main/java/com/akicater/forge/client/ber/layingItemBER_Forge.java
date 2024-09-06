@@ -1,8 +1,8 @@
-package com.akicater.neoforge.client.ber;
+package com.akicater.forge.client.ber;
 
 import com.akicater.ber.layingItemBER;
 import com.akicater.blocks.layingItemBlockEntity;
-import com.akicater.neoforge.client.config.ItemPlacerConfigNeoForge;
+import com.akicater.forge.client.config.ItemPlacerConfigForge;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
@@ -10,9 +10,9 @@ import net.minecraft.client.util.math.MatrixStack;
 
 public class layingItemBER_Forge extends layingItemBER {
 
-    ItemPlacerConfigNeoForge config = AutoConfig.getConfigHolder(ItemPlacerConfigNeoForge.class).getConfig();
+    ItemPlacerConfigForge config = AutoConfig.getConfigHolder(ItemPlacerConfigForge.class).getConfig();
 
-    public layingItemBER_NeoForge(BlockEntityRendererFactory.Context ctx) {
+    public layingItemBER_Forge(BlockEntityRendererFactory.Context ctx) {
         super(ctx);
     }
 

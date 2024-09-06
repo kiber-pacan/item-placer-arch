@@ -49,10 +49,12 @@ subprojects {
         def replaceProperties = [
                 version : project.mod_version,
                 minecraft_version : project.minecraft_version,
-                java : "17",
+                java : project.java_version,
                 name : "Item placer",
-                description : "Simple mod that adds shelves to minecraft",
-                architectury_api_version : project.architectury_api_version
+                description : "Place any item on any block side",
+                architectury_api_version : project.architectury_api_version,
+                loader : project.loader,
+                fabric_loader : project.fabric_loader_version
         ]
 
         def files = ["fabric.mod.json", "META-INF/mods.toml", "META-INF/neoforge.mods.toml", "quilt.mod.json"]
@@ -82,11 +84,11 @@ subprojects {
 
     java {
         withSourcesJar()
-        targetCompatibility = sourceCompatibility = rootProject.java as Integer
+        targetCompatibility = sourceCompatibility = rootProject.java_version as Integer
     }
 
     tasks.withType(JavaCompile).configureEach {
-        it.options.release = rootProject.java as Integer
+        it.options.release = rootProject.java_version as Integer
     }
 
     def loader = project.name
@@ -95,8 +97,8 @@ subprojects {
 
 
     modrinth {
-        token = "token"
-        projectId = "shelf-mod"
+        token = ""
+        projectId = "item-placer"
         versionName = archives_name + " " + mod_version
         versionNumber = mod_version
         versionType = "release"

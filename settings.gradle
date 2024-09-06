@@ -32,7 +32,6 @@ if (hasProperty("index")) {
     version = 0
 }
 
-print("version: ${version}")
 
 def mc_versions = [
         "1.19.4", // 0
@@ -41,6 +40,8 @@ def mc_versions = [
         "1.21"    // 3
 ]
 writeBuildGradlePredefine(mc_versions, version)
+
+print("version: ${mc_versions.get(version)}-${version}")
 
 // Loading properties
 def props = new Properties()

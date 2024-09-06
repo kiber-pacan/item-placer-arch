@@ -15,9 +15,7 @@ import dev.architectury.registry.registries.Registrar;
 import dev.architectury.registry.registries.RegistrarManager;
 import dev.architectury.registry.registries.RegistrySupplier;
 import io.netty.buffer.Unpooled;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
+import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.block.piston.PistonBehavior;
@@ -66,13 +64,16 @@ public class ItemPlacerCommon {
 	public static KeyBinding STOP_SCROLLING_KEY;
 
 	public static void initializeServer() {
-		if (#if MC_VER < V1_20_4 new Platform.isForge() #else Platform.isForgeLike() #endif) MODID = "itemplacer";
+		if (#if MC_VER < V1_20_4 Platform.isForge() #else Platform.isForgeLike() #endif) MODID = "itemplacer";
 
 		MANAGER = Suppliers.memoize(() -> RegistrarManager.get(MODID));
 		Registrar<Block> blocks = MANAGER.get().get(Registries.BLOCK);
 		Registrar<BlockEntityType<?>> blockEntityTypes = MANAGER.get().get(Registries.BLOCK_ENTITY_TYPE);
 
-		LAYING_ITEM = blocks.register(#if MC_VER < V1_21 new Identifier #else Identifier.of #endif(MODID, "laying_item"), () -> new layingItem(Block.Settings.create().breakInstantly().nonOpaque().noBlockBreakParticles().pistonBehavior(PistonBehavior.DESTROY)));
+		LAYING_ITEM = blocks.register(#if MC_VER < V1_21 new Identifier #else Identifier.of #endif(MODID, "laying_item"),
+					() -> new layingItem(Block.Settings #if MC_VER > V1_19_4 .create() #else .of(Material.STONE) #endif .breakInstantly().nonOpaque().noBlockBreakParticles() #if MC_VER > V1_19_4 .pistonBehavior(PistonBehavior.DESTROY) #endif)
+		);
+
 		LAYING_ITEM_BLOCK_ENTITY = blockEntityTypes.register(
 				#if MC_VER < V1_21 new Identifier #else Identifier.of #endif(MODID, "laying_item_block_entity"),
 				() -> BlockEntityType.Builder.create(layingItemBlockEntity::new, LAYING_ITEM.get()).build(null)
@@ -91,15 +92,15 @@ public class ItemPlacerCommon {
 
 
 		#if MC_VER < V1_21
-			ITEMPLACE; = new Identifier(MODID, "itemplace");
-			ITEMROTATE; = new Identifier(MODID, "itemrotate");
+			ITEMPLACE = new Identifier(MODID, "itemplace");
+			ITEMROTATE = new Identifier(MODID, "itemrotate");
 			NetworkManager.registerReceiver(NetworkManager.Side.C2S, ITEMPLACE, (buf, context) -> {
-				ItemStack stack = context.getPlayer().getMainHandStack();
 				World world = context.getPlayer().getWorld();
 				BlockPos pos = buf.readBlockPos();
 				BlockHitResult hitResult = buf.readBlockHitResult();
+				ItemStack stack = context.getPlayer().getMainHandStack();
+				if (stack == ItemStack.EMPTY) return;
 				if (world.getBlockState(pos).getBlock() == Blocks.AIR || world.getBlockState(pos).getBlock() == Blocks.WATER) {
-					context.getPlayer().setStackInHand(Hand.MAIN_HAND, ItemStack.EMPTY);
 					Direction dir = hitResult.getSide().getOpposite();
 					BlockState state = ItemPlacerCommon.LAYING_ITEM.get().getDefaultState();
 					if (world.getBlockState(pos).getBlock() == Blocks.WATER) {
@@ -110,6 +111,7 @@ public class ItemPlacerCommon {
 					layingItemBlockEntity blockEntity = (layingItemBlockEntity)world.getChunk(pos).getBlockEntity(pos);
 					if (blockEntity != null) {
 						int i = ItemPlacerCommon.dirToInt(dir);
+						context.getPlayer().setStackInHand(Hand.MAIN_HAND, ItemStack.EMPTY);
 						blockEntity.inventory.set(i, stack);
 						world.emitGameEvent(context.getPlayer(), GameEvent.BLOCK_CHANGE, pos);
 						blockEntity.markDirty();
@@ -145,18 +147,17 @@ public class ItemPlacerCommon {
 	}
 
 	public static void initializeClient() {
-		if (#if MC_VER < V1_20_4 new Platform.isForge() #else Platform.isForgeLike() #endif) {
+		/*if (#if MC_VER < V1_20_4 Platform.isForge() #else Platform.isForgeLike() #endif) {
 			MODID = "itemplacer";
 			#if MC_VER < V1_21
-				ITEMPLACE; = new Identifier(MODID, "itemplace");
-				ITEMROTATE; = new Identifier(MODID, "itemrotate");
+				ITEMPLACE = new Identifier(MODID, "itemplace");
+				ITEMROTATE = new Identifier(MODID, "itemrotate");
 				NetworkManager.registerReceiver(NetworkManager.Side.C2S, ITEMPLACE, (buf, context) -> {
-					ItemStack stack = context.getPlayer().getMainHandStack();
 					World world = context.getPlayer().getWorld();
 					BlockPos pos = buf.readBlockPos();
 					BlockHitResult hitResult = buf.readBlockHitResult();
 					if (world.getBlockState(pos).getBlock() == Blocks.AIR || world.getBlockState(pos).getBlock() == Blocks.WATER) {
-						context.getPlayer().setStackInHand(Hand.MAIN_HAND, ItemStack.EMPTY);
+
 						Direction dir = hitResult.getSide().getOpposite();
 						BlockState state = ItemPlacerCommon.LAYING_ITEM.get().getDefaultState();
 						if (world.getBlockState(pos).getBlock() == Blocks.WATER) {
@@ -167,6 +168,9 @@ public class ItemPlacerCommon {
 						layingItemBlockEntity blockEntity = (layingItemBlockEntity)world.getChunk(pos).getBlockEntity(pos);
 						if (blockEntity != null) {
 							int i = ItemPlacerCommon.dirToInt(dir);
+							ItemStack stack = context.getPlayer().getMainHandStack();
+							if (stack == ItemStack.EMPTY) return;
+							context.getPlayer().setStackInHand(Hand.MAIN_HAND, ItemStack.EMPTY);
 							blockEntity.inventory.set(i, stack);
 							world.emitGameEvent(context.getPlayer(), GameEvent.BLOCK_CHANGE, pos);
 							blockEntity.markDirty();
@@ -177,6 +181,8 @@ public class ItemPlacerCommon {
 						if (blockEntity != null) {
 							int i = ItemPlacerCommon.dirToInt(dir);
 							if(blockEntity.inventory.get(i).isEmpty()) {
+								ItemStack stack = context.getPlayer().getMainHandStack();
+								if (stack == ItemStack.EMPTY) return;
 								context.getPlayer().setStackInHand(Hand.MAIN_HAND, ItemStack.EMPTY);
 								blockEntity.inventory.set(i, stack);
 								world.emitGameEvent(context.getPlayer(), GameEvent.BLOCK_CHANGE, pos);
@@ -197,7 +203,7 @@ public class ItemPlacerCommon {
 			#else
 
 			#endif
-		}
+		}*/
 
 		PLACE_KEY = new KeyBinding(
 				"Place item",

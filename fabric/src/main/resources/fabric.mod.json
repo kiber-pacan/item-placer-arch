@@ -3,7 +3,7 @@
   "id": "item-placer",
   "version": "${version}",
   "name": "${name}",
-  "description": "Place any item on any block side",
+  "description": "${description}",
   "authors": [
     "akicater"
   ],
@@ -29,10 +29,10 @@
     "itemplacer.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.16.1",
+    "fabricloader": ">=${fabric_loader}",
     "minecraft": "~${minecraft_version}",
-    "java": ">=17",
-    "architectury": ">=9.2.14",
+    "java": ">=${java}",
+    "architectury": ">=${architectury_api_version}",
     "fabric-api": "*"
   },
   "suggests": {

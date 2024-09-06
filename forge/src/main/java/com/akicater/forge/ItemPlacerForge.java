@@ -1,6 +1,7 @@
 package com.akicater.forge;
 
 import com.akicater.ItemPlacerCommon;
+import com.akicater.forge.client.config.ClothConfigImpl;
 import dev.architectury.platform.forge.EventBuses;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;

@@ -33,12 +33,13 @@ public record ItemPlacePayload(BlockPos pos, BlockHitResult hitResult) implement
         return ID;
     }
     public static void receive(PlayerEntity player, BlockPos pos, BlockHitResult hitResult) {
-        ItemStack stack = player.getMainHandStack();
         World world = player.getWorld();
+        ItemStack stack = player.getMainHandStack();
         if (world.getBlockState(pos).getBlock() == Blocks.AIR || world.getBlockState(pos).getBlock() == Blocks.WATER) {
             player.setStackInHand(Hand.MAIN_HAND, ItemStack.EMPTY);
             Direction dir = hitResult.getSide().getOpposite();
             BlockState state = ItemPlacerCommon.LAYING_ITEM.get().getDefaultState();
+            if (stack == ItemStack.EMPTY) return;
             if (world.getBlockState(pos).getBlock() == Blocks.WATER) {
                 state = state.with(Properties.WATERLOGGED, true);
             }

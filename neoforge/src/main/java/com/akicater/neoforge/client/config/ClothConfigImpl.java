@@ -16,7 +16,6 @@ import net.neoforged.fml.ModLoadingContext;
 
 public class ClothConfigImpl {
     public static void registerModsPage() {
-        /*
         #if MC_VER != V1_20_4
         ModLoadingContext.get().registerExtensionPoint(
                 #if MC_VER >= V1_21
@@ -24,8 +23,8 @@ public class ClothConfigImpl {
                 #else
                     ConfigScreenHandler.ConfigScreenFactory.class,
                 #endif
-                () -> (mc, screen) -> AutoConfig.getConfigScreen(ShelfModConfigNeoForge.class, screen)#if MC_VER >= V1_21 .get() #endif
+                () -> (mc, screen) -> AutoConfig.getConfigScreen(ItemPlacerConfigNeoForge.class, screen)#if MC_VER >= V1_21 .get() #endif
         );
-        #endif*/
+        #endif
     }
 }
