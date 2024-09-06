@@ -28,7 +28,7 @@ jobs:
           java-version: ${{ matrix.java }}
           distribution: 'microsoft'
           
-      - name: build
+      - name: make wrapper executable
         run: chmod +x ./gradlew
           
       - name: build0
