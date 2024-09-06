@@ -27,6 +27,8 @@ jobs:
           distribution: 'microsoft'
       - name: make gradle wrapper executable
           run: chmod +x ./gradlew
+
+          
       - name: build0
           run: ./gradlew build -Pindex="0"
       - name: build1
