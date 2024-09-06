@@ -27,7 +27,7 @@ jobs:
           distribution: 'microsoft'
           
       - name: build
-          run: chmod +x gradlew.sh
+          run: chmod +x ./gradlew
           
       - name: build0
           run: ./gradlew build -Pindex="0"
