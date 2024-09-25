@@ -9,8 +9,8 @@ import net.minecraft.inventory.Inventories;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtOps;
+import net.minecraft.network.Packet;
 import net.minecraft.network.listener.ClientPlayPacketListener;
-import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.ItemScatterer;
@@ -62,6 +62,8 @@ public class layingItemBlockEntity extends BlockEntity {
             world.updateComparators(pos, LAYING_ITEM.get());
         }
     }
+
+
 
     public layingItemBlockEntity(BlockPos pos, BlockState state) {
         super(ItemPlacerCommon.LAYING_ITEM_BLOCK_ENTITY.get(), pos, state);
