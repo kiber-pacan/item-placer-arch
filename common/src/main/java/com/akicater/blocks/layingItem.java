@@ -57,6 +57,10 @@ public class layingItem extends Block implements Waterloggable, BlockEntityProvi
     }
 
     @Override
+    protected void spawnBreakParticles(World world, PlayerEntity player, BlockPos pos, BlockState state) {
+    }
+
+    @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
         return new layingItemBlockEntity(pos, state);
     }

@@ -65,7 +65,7 @@ public class ItemPlacerCommon {
         Registrar<Block> blocks = MANAGER.get().get(Registry.BLOCK_KEY);
         Registrar<BlockEntityType<?>> blockEntityTypes = MANAGER.get().get(Registry.BLOCK_ENTITY_TYPE_KEY);
 
-        LAYING_ITEM = blocks.register(new Identifier(MODID, "laying_item"), () -> new layingItem(Block.Settings.of(Material.AIR).breakInstantly().nonOpaque()));
+        LAYING_ITEM = blocks.register(new Identifier(MODID, "laying_item"), () -> new layingItem(Block.Settings.of(Material.DECORATION).breakInstantly().nonOpaque()));
         LAYING_ITEM_BLOCK_ENTITY = blockEntityTypes.register(
             new Identifier(MODID, "laying_item_block_entity"),
             () -> BlockEntityType.Builder.create(layingItemBlockEntity::new, LAYING_ITEM.get()).build(null)
