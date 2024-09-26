@@ -87,7 +87,7 @@ public class ItemPlacerCommon {
                 }
                 world.setBlockState(pos, state);
                 state.initShapeCache();
-                layingItemBlockEntity blockEntity = (layingItemBlockEntity) world.getChunk(pos).getBlockEntity(pos);
+                layingItemBlockEntity blockEntity = (layingItemBlockEntity)world.getChunk(pos).getBlockEntity(pos);
                 if (blockEntity != null) {
                     int i = ItemPlacerCommon.dirToInt(dir);
                     blockEntity.inventory.set(i, stack);
@@ -96,10 +96,10 @@ public class ItemPlacerCommon {
                 }
             } else if (world.getBlockState(pos).getBlock() == ItemPlacerCommon.LAYING_ITEM.get()) {
                 Direction dir = hitResult.getSide().getOpposite();
-                layingItemBlockEntity blockEntity = (layingItemBlockEntity) world.getChunk(pos).getBlockEntity(pos);
+                layingItemBlockEntity blockEntity = (layingItemBlockEntity)world.getChunk(pos).getBlockEntity(pos);
                 if (blockEntity != null) {
                     int i = ItemPlacerCommon.dirToInt(dir);
-                    if (blockEntity.inventory.get(i).isEmpty()) {
+                    if(blockEntity.inventory.get(i).isEmpty()) {
                         context.getPlayer().setStackInHand(Hand.MAIN_HAND, ItemStack.EMPTY);
                         blockEntity.inventory.set(i, stack);
                         world.emitGameEvent(context.getPlayer(), GameEvent.BLOCK_CHANGE, pos);
@@ -137,7 +137,7 @@ public class ItemPlacerCommon {
                     }
                     world.setBlockState(pos, state);
                     state.initShapeCache();
-                    layingItemBlockEntity blockEntity = (layingItemBlockEntity) world.getChunk(pos).getBlockEntity(pos);
+                    layingItemBlockEntity blockEntity = (layingItemBlockEntity)world.getChunk(pos).getBlockEntity(pos);
                     if (blockEntity != null) {
                         int i = ItemPlacerCommon.dirToInt(dir);
                         blockEntity.inventory.set(i, stack);
@@ -146,10 +146,10 @@ public class ItemPlacerCommon {
                     }
                 } else if (world.getBlockState(pos).getBlock() == ItemPlacerCommon.LAYING_ITEM.get()) {
                     Direction dir = hitResult.getSide().getOpposite();
-                    layingItemBlockEntity blockEntity = (layingItemBlockEntity) world.getChunk(pos).getBlockEntity(pos);
+                    layingItemBlockEntity blockEntity = (layingItemBlockEntity)world.getChunk(pos).getBlockEntity(pos);
                     if (blockEntity != null) {
                         int i = ItemPlacerCommon.dirToInt(dir);
-                        if (blockEntity.inventory.get(i).isEmpty()) {
+                        if(blockEntity.inventory.get(i).isEmpty()) {
                             context.getPlayer().setStackInHand(Hand.MAIN_HAND, ItemStack.EMPTY);
                             blockEntity.inventory.set(i, stack);
                             world.emitGameEvent(context.getPlayer(), GameEvent.BLOCK_CHANGE, pos);
@@ -266,7 +266,7 @@ public class ItemPlacerCommon {
         double y = Math.abs(yT - blockPos.getY());
         double z = Math.abs(zT - blockPos.getZ());
 
-        Vec3d pos = new Vec3d(x, y, z);
+        Vec3d pos = new Vec3d(x,y,z);
 
         for (int i = 0; i < boxes.size(); i++) {
             if (contains(pos, boxes.get(i))) {

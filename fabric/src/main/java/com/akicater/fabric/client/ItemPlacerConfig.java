@@ -11,4 +11,5 @@ public class ItemPlacerConfig implements ConfigData {
     public float tempItemSize = 1.0f;
     public float tempBlockSize = 1.0f;
     public boolean oldRendering = false;
+    public float blockDepthOffset = 0f;
 }

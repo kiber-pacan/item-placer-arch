@@ -63,8 +63,6 @@ public class layingItemBlockEntity extends BlockEntity {
         }
     }
 
-
-
     public layingItemBlockEntity(BlockPos pos, BlockState state) {
         super(ItemPlacerCommon.LAYING_ITEM_BLOCK_ENTITY.get(), pos, state);
     }

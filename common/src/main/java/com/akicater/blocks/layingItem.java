@@ -113,7 +113,7 @@ public class layingItem extends Block implements Waterloggable, BlockEntityProvi
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView blockView, BlockPos pos, ShapeContext context) {
-        if (!RETRIEVE_KEY.isUnbound() && !RETRIEVE_KEY.isPressed())
+        if (!RETRIEVE_KEY.isUnbound() && !RETRIEVE_KEY.isPressed() && !STOP_SCROLLING_KEY.isPressed())
             return VoxelShapes.empty();
         layingItemBlockEntity entity = (layingItemBlockEntity) blockView.getBlockEntity(pos);
         List<VoxelShape> tempShape = new ArrayList<>();
