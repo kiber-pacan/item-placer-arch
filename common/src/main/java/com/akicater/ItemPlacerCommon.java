@@ -52,7 +52,7 @@ public class ItemPlacerCommon {
 
     public static Identifier ITEMPLACE;
     public static Identifier ITEMROTATE;
-
+    public static Identifier ITEMRETRIEVE;
 
     public static KeyBinding PLACE_KEY;
     public static KeyBinding STOP_SCROLLING_KEY;
@@ -73,6 +73,7 @@ public class ItemPlacerCommon {
 
         ITEMPLACE = new Identifier(MODID, "itemplace");
         ITEMROTATE = new Identifier(MODID, "itemrotate");
+        ITEMRETRIEVE = new Identifier(MODID, "itemretrieve");
 
         NetworkManager.registerReceiver(NetworkManager.Side.C2S, ITEMPLACE, (buf, context) -> {
             ItemStack stack = context.getPlayer().getMainHandStack();
@@ -88,7 +89,7 @@ public class ItemPlacerCommon {
                 }
                 world.setBlockState(pos, state);
                 state.initShapeCache();
-                layingItemBlockEntity blockEntity = (layingItemBlockEntity)world.getChunk(pos).getBlockEntity(pos);
+                layingItemBlockEntity blockEntity = (layingItemBlockEntity) world.getChunk(pos).getBlockEntity(pos);
                 if (blockEntity != null) {
                     int i = ItemPlacerCommon.dirToInt(dir);
                     blockEntity.inventory.set(i, stack);
@@ -97,10 +98,10 @@ public class ItemPlacerCommon {
                 }
             } else if (world.getBlockState(pos).getBlock() == ItemPlacerCommon.LAYING_ITEM.get()) {
                 Direction dir = hitResult.getSide().getOpposite();
-                layingItemBlockEntity blockEntity = (layingItemBlockEntity)world.getChunk(pos).getBlockEntity(pos);
+                layingItemBlockEntity blockEntity = (layingItemBlockEntity) world.getChunk(pos).getBlockEntity(pos);
                 if (blockEntity != null) {
                     int i = ItemPlacerCommon.dirToInt(dir);
-                    if(blockEntity.inventory.get(i).isEmpty()) {
+                    if (blockEntity.inventory.get(i).isEmpty()) {
                         context.getPlayer().setStackInHand(Hand.MAIN_HAND, ItemStack.EMPTY);
                         blockEntity.inventory.set(i, stack);
                         world.emitGameEvent(context.getPlayer(), GameEvent.BLOCK_CHANGE, pos);
@@ -119,6 +120,14 @@ public class ItemPlacerCommon {
             }
         });
 
+        NetworkManager.registerReceiver(NetworkManager.Side.C2S, ITEMRETRIEVE, (buf, context) -> {
+            BlockPos pos = buf.readBlockPos();
+            World world = context.getPlayer().getEntityWorld();
+            BlockEntity blockEntity = world.getChunk(pos).getBlockEntity(pos);
+            if (blockEntity instanceof layingItemBlockEntity) {
+                layingItem.retrieveItem(blockEntity.getCachedState(), world, pos, buf.readBlockHitResult(), (layingItemBlockEntity) blockEntity);
+            }
+        });
     }
 
     public static void initializeClient() {
@@ -139,7 +148,7 @@ public class ItemPlacerCommon {
                     }
                     world.setBlockState(pos, state);
                     state.initShapeCache();
-                    layingItemBlockEntity blockEntity = (layingItemBlockEntity)world.getChunk(pos).getBlockEntity(pos);
+                    layingItemBlockEntity blockEntity = (layingItemBlockEntity) world.getChunk(pos).getBlockEntity(pos);
                     if (blockEntity != null) {
                         int i = ItemPlacerCommon.dirToInt(dir);
                         blockEntity.inventory.set(i, stack);
@@ -148,10 +157,10 @@ public class ItemPlacerCommon {
                     }
                 } else if (world.getBlockState(pos).getBlock() == ItemPlacerCommon.LAYING_ITEM.get()) {
                     Direction dir = hitResult.getSide().getOpposite();
-                    layingItemBlockEntity blockEntity = (layingItemBlockEntity)world.getChunk(pos).getBlockEntity(pos);
+                    layingItemBlockEntity blockEntity = (layingItemBlockEntity) world.getChunk(pos).getBlockEntity(pos);
                     if (blockEntity != null) {
                         int i = ItemPlacerCommon.dirToInt(dir);
-                        if(blockEntity.inventory.get(i).isEmpty()) {
+                        if (blockEntity.inventory.get(i).isEmpty()) {
                             context.getPlayer().setStackInHand(Hand.MAIN_HAND, ItemStack.EMPTY);
                             blockEntity.inventory.set(i, stack);
                             world.emitGameEvent(context.getPlayer(), GameEvent.BLOCK_CHANGE, pos);
@@ -167,6 +176,15 @@ public class ItemPlacerCommon {
                 BlockEntity blockEntity = world.getChunk(pos).getBlockEntity(pos);
                 if (blockEntity instanceof layingItemBlockEntity) {
                     ((layingItemBlockEntity) blockEntity).rotate(buf.readFloat(), getDirection(buf.readBlockHitResult()));
+                }
+            });
+
+            NetworkManager.registerReceiver(NetworkManager.Side.C2S, ITEMRETRIEVE, (buf, context) -> {
+                BlockPos pos = buf.readBlockPos();
+                World world = context.getPlayer().getEntityWorld();
+                BlockEntity blockEntity = world.getChunk(pos).getBlockEntity(pos);
+                if (blockEntity instanceof layingItemBlockEntity) {
+                    layingItem.retrieveItem(blockEntity.getCachedState(), world, pos, buf.readBlockHitResult(), (layingItemBlockEntity) blockEntity);
                 }
             });
         }
@@ -208,6 +226,16 @@ public class ItemPlacerCommon {
                     buf.writeBlockPos(pos.offset(side, 1));
                     buf.writeBlockHitResult((BlockHitResult) client.crosshairTarget);
                     NetworkManager.sendToServer(ITEMPLACE, buf);
+                }
+            }
+        });
+        ClientTickEvent.CLIENT_POST.register(client -> {
+            if (RETRIEVE_KEY.wasPressed()) {
+                if (MinecraftClient.getInstance().crosshairTarget instanceof BlockHitResult) {
+                    PacketByteBuf buf = new PacketByteBuf(Unpooled.buffer());
+                    buf.writeBlockPos(((BlockHitResult) MinecraftClient.getInstance().crosshairTarget).getBlockPos());
+                    buf.writeBlockHitResult((BlockHitResult) MinecraftClient.getInstance().crosshairTarget);
+                    NetworkManager.sendToServer(ITEMRETRIEVE, buf);
                 }
             }
         });
@@ -267,7 +295,7 @@ public class ItemPlacerCommon {
         double y = Math.abs(yT - blockPos.getY());
         double z = Math.abs(zT - blockPos.getZ());
 
-        Vec3d pos = new Vec3d(x,y,z);
+        Vec3d pos = new Vec3d(x, y, z);
 
         for (int i = 0; i < boxes.size(); i++) {
             if (contains(pos, boxes.get(i))) {

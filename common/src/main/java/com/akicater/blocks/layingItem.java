@@ -69,21 +69,25 @@ public class layingItem extends Block implements Waterloggable, BlockEntityProvi
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         layingItemBlockEntity blockEntity = (layingItemBlockEntity) world.getChunk(pos).getBlockEntity(pos);
         if (blockEntity != null && (RETRIEVE_KEY.isUnbound() || RETRIEVE_KEY.isPressed())) {
-            blockEntity.dropItem(getDirection(hit));
-            if (isInventoryClear(blockEntity.inventory)) {
-                if (state.get(WATERLOGGED)) {
-                    world.setBlockState(pos, Blocks.WATER.getDefaultState());
-                } else {
-                    world.setBlockState(pos, Blocks.AIR.getDefaultState());
-                }
-            }
-            world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.ENTITY_PAINTING_PLACE, SoundCategory.BLOCKS, 1f, 2f, true);
+            retrieveItem(state, world, pos, hit, blockEntity);
             return ActionResult.SUCCESS;
         }
         return ActionResult.FAIL;
     }
 
-    Boolean isInventoryClear(DefaultedList<ItemStack> inventory) {
+    public static void retrieveItem(BlockState state, World world, BlockPos pos, BlockHitResult hit, layingItemBlockEntity blockEntity) {
+        blockEntity.dropItem(getDirection(hit));
+        if (isInventoryClear(blockEntity.inventory)) {
+            if (state.get(WATERLOGGED)) {
+                world.setBlockState(pos, Blocks.WATER.getDefaultState());
+            } else {
+                world.setBlockState(pos, Blocks.AIR.getDefaultState());
+            }
+        }
+        world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.ENTITY_PAINTING_PLACE, SoundCategory.BLOCKS, 1f, 2f, true);
+    }
+
+    private static Boolean isInventoryClear(DefaultedList<ItemStack> inventory) {
         for (ItemStack itemStack : inventory) {
             if (!ItemStack.EMPTY.equals(itemStack)) {
                 return false;
