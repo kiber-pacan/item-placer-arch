@@ -19,8 +19,6 @@ import net.minecraft.world.World;
 import java.util.ArrayList;
 import java.util.List;
 
-import static net.minecraft.util.math.MathHelper.*;
-
 public class layingItemBER implements BlockEntityRenderer<layingItemBlockEntity> {
 
     ItemPlacerConfig config = AutoConfig.getConfigHolder(ItemPlacerConfig.class).getConfig();
@@ -85,9 +83,10 @@ public class layingItemBER implements BlockEntityRenderer<layingItemBlockEntity>
                     // Differentiate new and old block rendering
                     if (!oldRendering) {
                         matrices.multiply(rotateX((float) Math.toRadians(-90), rotateZ((float) Math.toRadians(entity.rotation.list.get(i)), list.get(i))));
-                        matrices.translate(0, 0.25 * blockSize - 0.025, 0);
+                        matrices.translate(0, 0.25 * blockSize - 0.025, config.blockDepthOffset);
                     } else {
                         matrices.multiply(rotateZ((float) Math.toRadians(entity.rotation.list.get(i)), list.get(i)));
+                        matrices.translate(0, 0, config.blockDepthOffset);
                     }
                     matrices.scale(blockSize, blockSize, blockSize);
                 } else {
