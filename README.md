@@ -1,3 +1,5 @@
+Gonna be obsolete soon! https://github.com/kiber-pacan/ipla
+
 # Item placer
 Minecraft mod that lets you place your favourite items however you like
 
